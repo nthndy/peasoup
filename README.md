@@ -52,13 +52,20 @@ Photos: drop them in `assets/img/` and reference them as
 `![alt text](/assets/img/your-photo.jpg)`.
 
 ### Plants (`_data/plants.yml`)
-Duplicate a block. `status` is one of `thriving`, `steady`, `struggling`,
-`lost`. `zone` is one of `marginal`, `oxygenator`, `floating`, `deep-water`,
-`bog`. Update `checked` when you do a health check.
+Duplicate a block to add a new plant. Each plant carries its history as
+`checks`, a list of dated health checks, newest first — the first entry is
+the plant's current state. Add a new block at the **top** of a plant's
+`checks:` each time you look at it. `status` is one of `planted`, `thriving`,
+`steady`, `struggling`, `lost`. `zone` is one of `marginal`, `oxygenator`,
+`floating`, `deep-water`, `bog`. `note` and `photos` (paths under
+`/assets/img/`) on a check are both optional — leave them out rather than
+leaving them blank.
 
 ### Water chemistry (`_data/water.yml`)
 Add a new block at the **top** of `log:` each time you test. Colours are worked
-out automatically from the `targets:` safe bands, so you never set them by hand.
+out automatically from the `targets:` safe/warn bands, so you never set them by
+hand; `range` sets the axis scale for the charts on the water page. `photos` on
+a log entry is optional.
 
 ### Wishlist (`_data/wishlist.yml`)
 Two lists, `plants` and `materials`. Set `got: true` once you have something and

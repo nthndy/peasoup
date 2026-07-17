@@ -206,6 +206,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .legend { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; padding: 0; margin: 0 0 2rem; font-size: .85rem; color: var(--ink-soft); }
 .status { display: inline-flex; align-items: center; gap: .4rem; }
 .status-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--grey); flex: 0 0 auto; }
+.status--planted    .status-dot { background: var(--grey); }
 .status--thriving   .status-dot { background: var(--green-deep); }
 .status--steady     .status-dot { background: var(--mauve); }
 .status--struggling .status-dot { background: var(--magenta); }
@@ -229,6 +230,39 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .plant-meta div { display: flex; flex-direction: column; }
 .plant-meta dt { font-family: var(--font-mono); font-size: .66rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); margin: 0; }
 .plant-meta dd { margin: 0; font-size: .85rem; }
+
+.plant-history { list-style: none; margin: .9rem 0 0; padding: .8rem 0 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: .7rem; }
+.plant-check { font-size: .85rem; }
+.plant-check-date { font-family: var(--font-mono); font-size: .72rem; color: var(--ink-soft); margin-right: .5rem; }
+.plant-check .status { font-size: .8rem; }
+.plant-check-note { margin: .3rem 0 0; color: var(--ink-soft); }
+
+/* --- Thumbnails (plant checks + water log photos) --------------------------- */
+.thumbs { display: flex; flex-wrap: wrap; gap: .4rem; margin: .4rem 0 0; }
+.thumbs img { width: 56px; height: 56px; object-fit: cover; border-radius: 6px; border: 1px solid var(--line); }
+
+/* --- Water charts ------------------------------------------------------------ */
+.chart-wrap {
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 1rem 1.1rem 1.2rem; margin-bottom: 1rem;
+}
+.chart-title { font-family: var(--font-mono); font-size: .78rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); margin: 0 0 .6rem; }
+.chart-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.chart-svg text { font-family: var(--font-mono); font-size: 9px; fill: var(--ink-soft); }
+.chart-axis-line { stroke: var(--line); stroke-width: 1; }
+.chart-line { fill: none; stroke-width: 2; }
+.chart-dot { stroke: #fff; stroke-width: 1.5; }
+.series--ammonia   { stroke: var(--green-deep); fill: var(--green-deep); }
+.series--nitrite   { stroke: var(--mauve); fill: var(--mauve); }
+.series--phosphate { stroke: var(--magenta); fill: var(--magenta); }
+.series--ph        { stroke: var(--green-deep); fill: var(--green-deep); }
+.chart-band--ammonia   { fill: var(--green-deep); }
+.chart-band--nitrite   { fill: var(--mauve); }
+.chart-band--phosphate { fill: var(--magenta); }
+.chart-band--ph        { fill: var(--green-deep); }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 1rem; margin: .7rem 0 0; font-size: .8rem; color: var(--ink-soft); }
+.chart-legend-item { display: inline-flex; align-items: center; gap: .35rem; }
+.chart-legend-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
 
 /* --- Sponsor --------------------------------------------------------------- */
 .sponsor-intro { margin-bottom: 2.5rem; }

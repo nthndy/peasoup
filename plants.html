@@ -5,6 +5,7 @@ permalink: /plants/
 lede: Everything currently in the pond, with its status at the last health check.
 ---
 <ul class="legend">
+  <li class="status status--planted"><span class="status-dot"></span>Planted</li>
   <li class="status status--thriving"><span class="status-dot"></span>Thriving</li>
   <li class="status status--steady"><span class="status-dot"></span>Steady</li>
   <li class="status status--struggling"><span class="status-dot"></span>Struggling</li>
@@ -28,20 +29,36 @@ lede: Everything currently in the pond, with its status at the last health check
     </h2>
     <div class="plant-grid">
       {% for p in group %}
-      <article class="plant status--{{ p.status }}">
-        {% if p.photo %}<img class="plant-photo" src="{{ p.photo | relative_url }}" alt="{{ p.name }}">{% endif %}
+      {% assign latest = p.checks | first %}
+      <article class="plant status--{{ latest.status }}">
         <div class="plant-body">
           <div class="plant-title">
-            <span class="status-dot" title="{{ p.status }}"></span>
+            <span class="status-dot" title="{{ latest.status }}"></span>
             <h3>{{ p.name }}</h3>
           </div>
           <p class="latin">{{ p.latin }}</p>
           {% if p.notes %}<p class="plant-notes">{{ p.notes }}</p>{% endif %}
           <dl class="plant-meta">
             <div><dt>Added</dt><dd>{{ p.added | date: "%b %Y" }}</dd></div>
-            <div><dt>Checked</dt><dd>{{ p.checked | date: "%-d %b %Y" }}</dd></div>
-            <div><dt>Status</dt><dd class="cap">{{ p.status }}</dd></div>
+            <div><dt>Checked</dt><dd>{{ latest.date | date: "%-d %b %Y" }}</dd></div>
+            <div><dt>Status</dt><dd class="cap">{{ latest.status }}</dd></div>
           </dl>
+          <ol class="plant-history">
+            {% for c in p.checks %}
+            <li class="plant-check">
+              <span class="plant-check-date">{{ c.date | date: "%-d %b %Y" }}</span>
+              <span class="status status--{{ c.status }}"><span class="status-dot"></span><span class="cap">{{ c.status }}</span></span>
+              {% if c.note %}<p class="plant-check-note">{{ c.note }}</p>{% endif %}
+              {% if c.photos %}
+              <div class="thumbs">
+                {% for photo in c.photos %}
+                <img src="{{ photo | relative_url }}" alt="{{ p.name }}, {{ c.date | date: "%-d %b %Y" }}">
+                {% endfor %}
+              </div>
+              {% endif %}
+            </li>
+            {% endfor %}
+          </ol>
         </div>
       </article>
       {% endfor %}

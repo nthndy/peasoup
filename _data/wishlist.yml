@@ -9,7 +9,7 @@ plants:
     priority: high
     cost: 18
     note: Deep-water anchor plant for shade and cover.
-    got: false
+    got: true
 
   - name: Bog bean
     latin: Menyanthes trifoliata
@@ -23,7 +23,7 @@ plants:
     priority: low
     cost: 7
     note: Native floater, but invasive if it escapes. Undecided.
-    got: false
+    got: true
 
 materials:
   - name: Aquatic planting baskets (x5)

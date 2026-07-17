@@ -1,56 +1,205 @@
 # Plant inventory. Add an entry per plant. Duplicate a block to add a new one.
 #
-# status: one of  thriving | steady | struggling | lost
-#   thriving   = green,  growing well
-#   steady     = holding, no change
-#   struggling = needs attention
-#   lost       = died / removed (kept for the record)
+# Each plant carries its history as `checks`, a list of dated health checks,
+# newest-first. The first entry in `checks` is the plant's current state —
+# there is no separate top-level status/checked field any more.
+#
+# checks[].status: one of  planted | thriving | steady | struggling | lost
+#   planted    = grey,    just went in, no verdict yet
+#   thriving   = green,   growing well
+#   steady     = mauve,   holding, no change
+#   struggling = magenta, needs attention
+#   lost       = grey,    died / removed (kept for the record)
+#
+# checks[].note: optional.
+# checks[].photos: optional list of paths under /assets/img/. Most checks
+#   won't have any — omit the key entirely rather than leaving it blank.
 #
 # zone: marginal | oxygenator | floating | deep-water | bog
-# checked: date of the most recent health check (YYYY-MM-DD)
-# photo: optional path under /assets/img/
-
-- name: Marsh marigold
-  latin: Caltha palustris
-  zone: marginal
-  added: 2026-04-12
-  status: thriving
-  checked: 2026-07-14
-  notes: Flowered early. Spreading into the shallow shelf nicely.
-  photo:
-
-- name: Water forget-me-not
-  latin: Myosotis scorpioides
-  zone: marginal
-  added: 2026-04-12
-  status: steady
-  checked: 2026-07-14
-  notes: Slow to establish but holding. A few flowers.
-  photo:
+# added: date the plant went in (YYYY-MM-DD)
+# There is no plant-level `photo` any more — photos live on individual checks.
 
 - name: Hornwort
   latin: Ceratophyllum demersum
   zone: oxygenator
-  added: 2026-05-02
-  status: thriving
-  checked: 2026-07-14
-  notes: Doing the heavy lifting on oxygenation. Trimmed a handful out.
-  photo:
+  added: 2026-07-02
+  notes: Weighted bunch. Throw on the surface and it sinks, or push into soil.
+  checks:
+    - date: 2026-07-08
+      status: thriving
+      note: Three more bunches added from the aquarium centre.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
 
-- name: Frogbit
-  latin: Hydrocharis morsus-ranae
+- name: Willow moss
+  latin: Fontinalis antipyretica
+  zone: oxygenator
+  added: 2026-07-02
+  notes: Native. Prefers moving water and cooler conditions. Planting depth 20-90cm.
+  checks:
+    - date: 2026-07-06
+      status: steady
+      note: Adapting well.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
+
+- name: Water starwort
+  latin: Callitriche
+  zone: oxygenator
+  added: 2026-07-02
+  notes: Native. Weighted bunch, placed just below the water line until established. Planting depth 15-45cm.
+  checks:
+    - date: 2026-07-11
+      status: struggling
+      note: Not anchoring itself. Viability uncertain.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
+
+- name: Mare's tail
+  latin: Hippuris vulgaris
+  zone: oxygenator
+  added: 2026-07-02
+  notes: British native. Aquatic to 30cm or as a marginal. Label warns it can be invasive.
+  checks:
+    - date: 2026-07-06
+      status: steady
+      note: Adapting well.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
+
+- name: Fibre optic plant
+  latin: Scirpus cernuus
+  zone: oxygenator
+  added: 2026-07-02
+  notes: Cotton bud grass. Up to 10cm of water. Acts as an oxygenator. Height 25-30cm, spread 50cm.
+  checks:
+    - date: 2026-07-06
+      status: steady
+      note: Adapting well.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
+
+- name: Water soldier
+  latin: Stratiotes aloides
   zone: floating
-  added: 2026-05-20
-  status: struggling
-  checked: 2026-07-14
-  notes: Some leaves yellowing. Watch nitrate. May be too much direct sun.
-  photo:
+  added: 2026-07-02
+  notes: Perennial, flowers July, full sun, hardy. Drops straight in at 30cm. Sinks over winter.
+  checks:
+    - date: 2026-07-11
+      status: lost
+      note: Lost. Foliage had been falling apart since the 6th and it did not recover.
+    - date: 2026-07-06
+      status: struggling
+      note: Foliage starting to fall apart. Not adapting well.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
+
+- name: Floating heart
+  latin: Nymphoides peltata
+  zone: floating
+  added: 2026-07-02
+  notes: Native. 30-60cm of water above soil, full sun to partial shade. Flowers June-Aug.
+  checks:
+    - date: 2026-07-11
+      status: steady
+      note: Anchoring well and sending up new pads, but some older pads rotting and want grooming.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
+
+- name: Un-named water lily
+  latin: Nymphaea
+  zone: deep-water
+  added: 2026-07-02
+  notes: Rhizome planted at 45 degrees, weighted with pea gravel, full sun.
+  checks:
+    - date: 2026-07-15
+      status: thriving
+      note: Going absolutely nuts. Several new pads this week.
+    - date: 2026-07-08
+      status: steady
+      note: One new pad appearing as the larger pad dies back.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
+
+- name: Willow grass
+  latin: Persicaria amphibia
+  zone: deep-water
+  added: 2026-07-02
+  notes: Water knotweed. Native. Better in deep water but tolerates damp. Flowers July-Sept, planting depth 15-90cm.
+  checks:
+    - date: 2026-07-06
+      status: steady
+      note: Adapting well.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
 
 - name: Flowering rush
   latin: Butomus umbellatus
   zone: marginal
-  added: 2026-06-01
-  status: steady
-  checked: 2026-07-14
-  notes: Settling in. No flower spike yet this year.
-  photo:
+  added: 2026-07-02
+  notes: Height 90cm, spread 45cm. Full sun, hardy. Planting depth 5-45cm above soil.
+  checks:
+    - date: 2026-07-06
+      status: steady
+      note: Adapting well.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
+
+- name: Brooklime
+  latin: Veronica beccabunga
+  zone: marginal
+  added: 2026-07-02
+  notes: Native shallow water plant. 0-10cm above soil. Flowers May-Aug.
+  checks:
+    - date: 2026-07-15
+      status: thriving
+      note: Sending up new shoots.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
+
+- name: Lesser pond sedge
+  latin: Carex acutiformis
+  zone: marginal
+  added: 2026-07-02
+  notes: Native shallow water plant. Up to 15cm above soil. Height to 123cm, flowers June-Aug, shade tolerant.
+  checks:
+    - date: 2026-07-06
+      status: steady
+      note: Adapting well.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
+
+- name: Creeping jenny
+  latin: "Lysimachia nummularia 'Aurea'"
+  zone: marginal
+  added: 2026-07-02
+  notes: Spreading perennial. Flowers June-Aug. Up to 15cm of water, height to 8cm.
+  checks:
+    - date: 2026-07-06
+      status: steady
+      note: Adapting well.
+    - date: 2026-07-02
+      status: planted
+      note: Planted out.
+
+- name: Elodea densa
+  latin: Egeria densa
+  zone: oxygenator
+  added: 2026-07-08
+  notes: Two bunches from the aquarium centre. Not a UK native — keep contained.
+  checks:
+    - date: 2026-07-08
+      status: planted
+      note: Two bunches added alongside the extra hornwort.
