@@ -27,12 +27,12 @@ I can confirm, writing this a week or so later, that the Legionnaires' test came
 
 | | reading |
 |---|---|
-| pH | 7.5-9 |
+| pH | 9 |
 | Ammonia | 0 ppm |
 | Nitrite | 0 ppm |
-| Phosphate | 5-10 ppm |
+| Phosphate | 10 ppm |
 
-Ammonia and nitrite at zero is what you want from fresh tap water: nothing has started decomposing yet, so there is nothing for the nitrogen cycle to chew on. The other two are less comfortable. London tap runs hard and alkaline, and this is at the top of that range. Phosphate is the one I will be watching, since that is the currency algae trades in. Both readings sat between swatches on the chart, so I have logged them as ranges rather than pretend to a precision I do not have.
+Ammonia and nitrite at zero is what you want from fresh tap water: nothing has started decomposing yet, so there is nothing for the nitrogen cycle to chew on. The other two are less comfortable. London tap runs hard and alkaline, but it comes out at 7 to 8, not 9, and the extra point is most likely the concrete leaching lime. Phosphate is at the top of the chart at 10 ppm, which is the currency algae trades in. I had tested a couple of days earlier, before the refill, and it was the same 10 then.
 
 The next step was to start adding plants. First came the oxygenators, which do two jobs at once. They photosynthesise entirely underwater, so they put oxygen straight into the water column rather than into the air above it. They also feed the same way: bathed in water, they absorb dissolved nitrates and phosphates across their whole leaf and stem surface, not just through roots. That is the competition. Anything the plants take up is nutrient the single-celled algae does not get, and starving the algae out is the strategy here. They do respire in the dark like everything else, so they give oxygen back by day and take it away by night.
 

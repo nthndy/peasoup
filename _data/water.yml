@@ -23,11 +23,32 @@ log:
     nitrite: 2
     phosphate: 5
     ph: 9
-    note: Ammonia and nitrite both up, the pond is mid-cycle after the extra oxygenators went in. Phosphate falling. pH still at the top of the scale, likely lime leaching from the concrete.
+    note: >-
+      Ammonia and nitrite both up from zero: the pond is cycling after the
+      extra oxygenators went in and the water soldier died back. Phosphate
+      still down at 5 since planting. pH unmoved.
 
   - date: 2026-07-06
     ammonia: 0
     nitrite: 0
-    phosphate: 7.5
+    phosphate: 5
     ph: 9
-    note: First proper test. Phosphate high and pH at the top of the chart, both expected in a new pond.
+    note: >-
+      Phosphate halved four days after planting. Ammonia and nitrite still at
+      zero, nothing decomposing yet.
+
+  - date: 2026-07-02
+    ammonia: 0
+    nitrite: 0
+    phosphate: 10
+    ph: 9
+    note: Planting day, tested before the plants went in. Phosphate at the top of the chart.
+
+  - date: 2026-06-30
+    ammonia: 0
+    nitrite: 0
+    phosphate: 10
+    ph: 8
+    note: >-
+      Baseline, before the refill. Readings taken indoors so the pH is the
+      least certain of the four; somewhere between 8 and 9.
