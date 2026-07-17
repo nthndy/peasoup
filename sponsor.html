@@ -1,0 +1,67 @@
+---
+layout: page
+title: Sponsor a plant
+permalink: /sponsor/
+lede: Chip in towards a plant and I'll add it to the pond with your name on the update.
+---
+{% assign offers = site.data.offers %}
+
+<section class="sponsor-intro">
+  <p>
+    Every plant here goes in by hand and gets logged on the
+    <a href="{{ '/plants/' | relative_url }}">plants page</a>. If you fancy backing one,
+    send whatever you like via Monzo and pop the plant's name in the payment reference.
+    I'll plant it, photograph it, and credit you in the next update.
+  </p>
+  <a class="monzo-btn" href="https://monzo.me/{{ site.monzo }}">
+    Sponsor via Monzo
+  </a>
+  <p class="fineprint">Goes to monzo.me/{{ site.monzo }}. Any amount welcome.</p>
+</section>
+
+<section class="offers">
+  <div class="section-head">
+    <h2>On offer now at {{ site.supplier_name }}</h2>
+    {% if offers.updated and offers.updated != "" %}
+      <span class="muted">updated {{ offers.updated | date: "%-d %b, %H:%M" }}</span>
+    {% endif %}
+  </div>
+
+  {% if offers.error and offers.error != "" %}
+    <p class="notice">Couldn't refresh the list this time. See the current offers straight from
+      <a href="{{ site.supplier_url }}">{{ site.supplier_name }}</a>.</p>
+  {% endif %}
+
+  {% if offers.products.size > 0 %}
+  <div class="offer-grid">
+    {% for item in offers.products %}
+    <article class="offer">
+      {% if item.image and item.image != "" %}
+      <a class="offer-thumb" href="{{ item.url }}"><img src="{{ item.image }}" alt="{{ item.name }}" loading="lazy"></a>
+      {% endif %}
+      <div class="offer-body">
+        <h3><a href="{{ item.url }}">{{ item.name }}</a></h3>
+        <p class="offer-price">
+          {% if item.was and item.was != "" %}<span class="was">{{ item.was }}</span>{% endif %}
+          <span class="now">{{ item.price }}</span>
+        </p>
+        {% assign ref = item.name | url_encode %}
+        {% if item.price_value and item.price_value != 0 %}
+          <a class="sponsor-link" href="https://monzo.me/{{ site.monzo }}/{{ item.price_value }}?d={{ ref }}">Sponsor this · {{ item.price }}</a>
+        {% else %}
+          <a class="sponsor-link" href="https://monzo.me/{{ site.monzo }}?d={{ ref }}">Sponsor this</a>
+        {% endif %}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+    <p class="notice">No offers loaded yet. Browse the current list at
+      <a href="{{ site.supplier_url }}">{{ site.supplier_name }}</a>.</p>
+  {% endif %}
+
+  <p class="fineprint">
+    Prices pulled automatically from {{ site.supplier_name }} and may lag the live shop.
+    Always check the <a href="{{ site.supplier_url }}">supplier page</a> before paying.
+  </p>
+</section>

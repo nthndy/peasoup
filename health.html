@@ -1,0 +1,62 @@
+---
+layout: page
+title: Water
+permalink: /health/
+lede: Pond chemistry, tested by hand. Colour shows each value against its safe band.
+---
+{% assign latest = site.data.water.log | first %}
+{% assign ta = site.data.water.targets.ammonia %}
+{% assign tn = site.data.water.targets.nitrite %}
+{% assign tp = site.data.water.targets.phosphate %}
+{% assign th = site.data.water.targets.ph %}
+
+<section class="water-latest">
+  <div class="section-head">
+    <h2>Latest reading</h2>
+    <span class="muted">{{ latest.date | date: "%-d %B %Y" }}</span>
+  </div>
+  <div class="water-cards">
+    <div class="water-card">
+      {% include reading.html key="ammonia" value=latest.ammonia label="Ammonia" %}
+      <p class="target">safe {{ ta.safe[0] }}–{{ ta.safe[1] }} {{ ta.unit }}</p>
+    </div>
+    <div class="water-card">
+      {% include reading.html key="nitrite" value=latest.nitrite label="Nitrite" %}
+      <p class="target">safe {{ tn.safe[0] }}–{{ tn.safe[1] }} {{ tn.unit }}</p>
+    </div>
+    <div class="water-card">
+      {% include reading.html key="phosphate" value=latest.phosphate label="Phosphate" %}
+      <p class="target">safe {{ tp.safe[0] }}–{{ tp.safe[1] }} {{ tp.unit }}</p>
+    </div>
+    <div class="water-card">
+      {% include reading.html key="ph" value=latest.ph label="pH" %}
+      <p class="target">safe {{ th.safe[0] }}–{{ th.safe[1] }}</p>
+    </div>
+  </div>
+  {% if latest.note %}<p class="water-note">{{ latest.note }}</p>{% endif %}
+</section>
+
+<section class="water-history">
+  <h2>History</h2>
+  <div class="table-scroll">
+    <table class="log">
+      <thead>
+        <tr>
+          <th>Date</th><th>Ammonia</th><th>Nitrite</th><th>Phosphate</th><th>pH</th><th>Note</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in site.data.water.log %}
+        <tr>
+          <td class="nowrap">{{ r.date | date: "%-d %b %Y" }}</td>
+          <td>{{ r.ammonia }}</td>
+          <td>{{ r.nitrite }}</td>
+          <td>{{ r.phosphate }}</td>
+          <td>{{ r.ph }}</td>
+          <td class="note-cell">{{ r.note }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>

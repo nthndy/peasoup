@@ -1,0 +1,51 @@
+---
+layout: page
+title: Plants
+permalink: /plants/
+lede: Everything currently in the pond, with its status at the last health check.
+---
+<ul class="legend">
+  <li class="status status--thriving"><span class="status-dot"></span>Thriving</li>
+  <li class="status status--steady"><span class="status-dot"></span>Steady</li>
+  <li class="status status--struggling"><span class="status-dot"></span>Struggling</li>
+  <li class="status status--lost"><span class="status-dot"></span>Lost</li>
+</ul>
+
+{% assign zones = "marginal,oxygenator,floating,deep-water,bog" | split: "," %}
+{% for zone in zones %}
+  {% assign group = site.data.plants | where: "zone", zone %}
+  {% if group.size > 0 %}
+  <section class="zone">
+    <h2 class="zone-head">
+      {% case zone %}
+        {% when "marginal" %}Marginal
+        {% when "oxygenator" %}Oxygenators
+        {% when "floating" %}Floating
+        {% when "deep-water" %}Deep water
+        {% when "bog" %}Bog
+        {% else %}{{ zone }}
+      {% endcase %}
+    </h2>
+    <div class="plant-grid">
+      {% for p in group %}
+      <article class="plant status--{{ p.status }}">
+        {% if p.photo %}<img class="plant-photo" src="{{ p.photo | relative_url }}" alt="{{ p.name }}">{% endif %}
+        <div class="plant-body">
+          <div class="plant-title">
+            <span class="status-dot" title="{{ p.status }}"></span>
+            <h3>{{ p.name }}</h3>
+          </div>
+          <p class="latin">{{ p.latin }}</p>
+          {% if p.notes %}<p class="plant-notes">{{ p.notes }}</p>{% endif %}
+          <dl class="plant-meta">
+            <div><dt>Added</dt><dd>{{ p.added | date: "%b %Y" }}</dd></div>
+            <div><dt>Checked</dt><dd>{{ p.checked | date: "%-d %b %Y" }}</dd></div>
+            <div><dt>Status</dt><dd class="cap">{{ p.status }}</dd></div>
+          </dl>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}
+{% endfor %}

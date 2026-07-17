@@ -1,0 +1,18 @@
+---
+layout: page
+title: Blog
+permalink: /blog/
+lede: Updates on the dig, the plants and everything that moves in.
+---
+<ul class="post-list post-list--full">
+  {% for post in site.posts %}
+  <li class="post-row">
+    <a class="post-link" href="{{ post.url | relative_url }}">
+      <span class="post-date">{{ post.date | date: "%-d %b %Y" }}</span>
+      <span class="post-title">{{ post.title }}</span>
+    </a>
+    {% if post.tags %}<p class="post-tags">{{ post.tags | join: " · " }}</p>{% endif %}
+    <p class="post-ex">{{ post.excerpt | strip_html | truncatewords: 34 }}</p>
+  </li>
+  {% endfor %}
+</ul>

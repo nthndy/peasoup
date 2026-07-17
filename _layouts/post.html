@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="post">
+  <div class="page-head">
+    <p class="eyebrow">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      {% if page.tags %}<span class="dot-sep"></span>{{ page.tags | join: ", " }}{% endif %}
+    </p>
+    <h1>{{ page.title }}</h1>
+  </div>
+
+  {% if page.cover %}
+  <figure class="post-cover">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.cover_alt | default: page.title }}">
+    {% if page.cover_caption %}<figcaption>{{ page.cover_caption }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
+
+  <div class="prose">
+    {{ content }}
+  </div>
+
+  <p class="back"><a href="{{ '/blog/' | relative_url }}">← all updates</a></p>
+</article>

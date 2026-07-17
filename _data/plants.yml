@@ -1,0 +1,56 @@
+# Plant inventory. Add an entry per plant. Duplicate a block to add a new one.
+#
+# status: one of  thriving | steady | struggling | lost
+#   thriving   = green,  growing well
+#   steady     = holding, no change
+#   struggling = needs attention
+#   lost       = died / removed (kept for the record)
+#
+# zone: marginal | oxygenator | floating | deep-water | bog
+# checked: date of the most recent health check (YYYY-MM-DD)
+# photo: optional path under /assets/img/
+
+- name: Marsh marigold
+  latin: Caltha palustris
+  zone: marginal
+  added: 2026-04-12
+  status: thriving
+  checked: 2026-07-14
+  notes: Flowered early. Spreading into the shallow shelf nicely.
+  photo:
+
+- name: Water forget-me-not
+  latin: Myosotis scorpioides
+  zone: marginal
+  added: 2026-04-12
+  status: steady
+  checked: 2026-07-14
+  notes: Slow to establish but holding. A few flowers.
+  photo:
+
+- name: Hornwort
+  latin: Ceratophyllum demersum
+  zone: oxygenator
+  added: 2026-05-02
+  status: thriving
+  checked: 2026-07-14
+  notes: Doing the heavy lifting on oxygenation. Trimmed a handful out.
+  photo:
+
+- name: Frogbit
+  latin: Hydrocharis morsus-ranae
+  zone: floating
+  added: 2026-05-20
+  status: struggling
+  checked: 2026-07-14
+  notes: Some leaves yellowing. Watch nitrate. May be too much direct sun.
+  photo:
+
+- name: Flowering rush
+  latin: Butomus umbellatus
+  zone: marginal
+  added: 2026-06-01
+  status: steady
+  checked: 2026-07-14
+  notes: Settling in. No flower spike yet this year.
+  photo:

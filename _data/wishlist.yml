@@ -1,0 +1,51 @@
+# Things not yet bought. Two groups: plants and materials.
+# priority: high | medium | low
+# got: true once acquired (leave the entry, it renders struck through)
+# cost: rough estimate in GBP, optional
+
+plants:
+  - name: White water lily
+    latin: Nymphaea alba
+    priority: high
+    cost: 18
+    note: Deep-water anchor plant for shade and cover.
+    got: false
+
+  - name: Bog bean
+    latin: Menyanthes trifoliata
+    priority: medium
+    cost: 6
+    note: For the boggy corner. Good for pollinators.
+    got: false
+
+  - name: Water soldier
+    latin: Stratiotes aloides
+    priority: low
+    cost: 7
+    note: Native floater, but invasive if it escapes. Undecided.
+    got: false
+
+materials:
+  - name: Aquatic planting baskets (x5)
+    priority: high
+    cost: 12
+    note: Mesh, various sizes for marginals.
+    got: true
+
+  - name: Aquatic compost
+    priority: high
+    cost: 9
+    note: Low-nutrient, to keep algae down.
+    got: false
+
+  - name: Hessian liner squares
+    priority: medium
+    cost: 5
+    note: To line the mesh baskets.
+    got: false
+
+  - name: Solar pump / small fountain head
+    priority: low
+    cost: 35
+    note: Optional. A little surface movement for oxygen without a mains run.
+    got: false

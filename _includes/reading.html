@@ -1,0 +1,14 @@
+{%- assign t = site.data.water.targets[include.key] -%}
+{%- assign v = include.value | plus: 0.0 -%}
+{%- if v >= t.safe[0] and v <= t.safe[1] -%}
+  {%- assign state = "good" -%}
+{%- elsif v >= t.warn[0] and v <= t.warn[1] -%}
+  {%- assign state = "watch" -%}
+{%- else -%}
+  {%- assign state = "act" -%}
+{%- endif -%}
+<div class="reading reading--{{ state }}">
+  <span class="reading-dot" aria-hidden="true"></span>
+  <span class="reading-label">{{ include.label }}</span>
+  <span class="reading-value">{{ include.value }}{% if t.unit != "" %} <em>{{ t.unit }}</em>{% endif %}</span>
+</div>

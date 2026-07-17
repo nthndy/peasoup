@@ -1,0 +1,38 @@
+# Water chemistry log.
+#
+# `targets` defines the safe band for each parameter and is used to colour-code
+# readings automatically:
+#   inside safe band            -> good   (green)
+#   inside warn band, outside safe -> watch (mauve)
+#   outside warn band           -> act    (magenta)
+#
+# `log` is newest-first. Add a new block at the TOP each time you test.
+# Units: ammonia / nitrite / phosphate in mg/L (ppm), pH unitless.
+
+targets:
+  ammonia:   { unit: "mg/L", safe: [0, 0.02], warn: [0, 0.25] }
+  nitrite:   { unit: "mg/L", safe: [0, 0.1],  warn: [0, 0.5] }
+  phosphate: { unit: "mg/L", safe: [0, 0.1],  warn: [0, 0.5] }
+  ph:        { unit: "",     safe: [6.5, 8.5], warn: [6.0, 9.0] }
+
+log:
+  - date: 2026-07-14
+    ammonia: 0.0
+    nitrite: 0.0
+    phosphate: 0.25
+    ph: 7.4
+    note: Phosphate creeping up. Frogbit looking peaky, might be related.
+
+  - date: 2026-07-01
+    ammonia: 0.0
+    nitrite: 0.05
+    phosphate: 0.1
+    ph: 7.6
+    note: Settled after the warm spell.
+
+  - date: 2026-06-15
+    ammonia: 0.25
+    nitrite: 0.4
+    phosphate: 0.1
+    ph: 7.8
+    note: Mini-cycle after adding new marginals. Held off feeding.

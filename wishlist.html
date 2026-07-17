@@ -1,0 +1,45 @@
+---
+layout: page
+title: Wishlist
+permalink: /wishlist/
+lede: Plants and kit still to buy. Struck-through means it's been sorted.
+---
+{% assign wl = site.data.wishlist %}
+
+<section class="wish">
+  <h2>Plants</h2>
+  <ul class="wish-list">
+    {% for item in wl.plants %}
+    <li class="wish-item priority--{{ item.priority }} {% if item.got %}is-got{% endif %}">
+      <span class="wish-check" aria-hidden="true"></span>
+      <div class="wish-body">
+        <p class="wish-name">{{ item.name }}{% if item.latin %} <em>{{ item.latin }}</em>{% endif %}</p>
+        {% if item.note %}<p class="wish-note">{{ item.note }}</p>{% endif %}
+      </div>
+      <div class="wish-tags">
+        <span class="tag tag--{{ item.priority }}">{{ item.priority }}</span>
+        {% if item.cost %}<span class="cost">~£{{ item.cost }}</span>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="wish">
+  <h2>Materials</h2>
+  <ul class="wish-list">
+    {% for item in wl.materials %}
+    <li class="wish-item priority--{{ item.priority }} {% if item.got %}is-got{% endif %}">
+      <span class="wish-check" aria-hidden="true"></span>
+      <div class="wish-body">
+        <p class="wish-name">{{ item.name }}</p>
+        {% if item.note %}<p class="wish-note">{{ item.note }}</p>{% endif %}
+      </div>
+      <div class="wish-tags">
+        <span class="tag tag--{{ item.priority }}">{{ item.priority }}</span>
+        {% if item.cost %}<span class="cost">~£{{ item.cost }}</span>{% endif %}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

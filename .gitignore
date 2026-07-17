@@ -1,0 +1,9 @@
+_site/
+.jekyll-cache/
+.jekyll-metadata
+vendor/
+.bundle/
+Gemfile.lock
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<section class="hero">
+  <p class="eyebrow">a fountain becoming a pond</p>
+  <h1 class="hero-title">peasoup</h1>
+  <p class="hero-lede">{{ site.description }}</p>
+</section>
+
+{% assign latest = site.data.water.log | first %}
+<section class="snapshot">
+  <div class="section-head">
+    <h2>Water{% if latest %}, last checked {{ latest.date | date: "%-d %b %Y" }}{% endif %}</h2>
+    <a href="{{ '/health/' | relative_url }}">full log →</a>
+  </div>
+  {% if latest %}
+  <div class="reading-strip">
+    {% include reading.html key="ammonia"   value=latest.ammonia   label="Ammonia" %}
+    {% include reading.html key="nitrite"   value=latest.nitrite   label="Nitrite" %}
+    {% include reading.html key="phosphate" value=latest.phosphate label="Phosphate" %}
+    {% include reading.html key="ph"        value=latest.ph        label="pH" %}
+  </div>
+  {% endif %}
+</section>
+
+<section class="latest">
+  <div class="section-head">
+    <h2>Latest updates</h2>
+    <a href="{{ '/blog/' | relative_url }}">all →</a>
+  </div>
+  <ul class="post-list">
+    {% for post in site.posts limit: 4 %}
+    <li class="post-row">
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        <span class="post-date">{{ post.date | date: "%-d %b %Y" }}</span>
+        <span class="post-title">{{ post.title }}</span>
+      </a>
+      <p class="post-ex">{{ post.excerpt | strip_html | truncatewords: 26 }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
