@@ -22,8 +22,6 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 timezone: Europe/London
 
-# Show newest posts first on listings.
-paginate: false
 
 # Files Jekyll should ignore.
 exclude:
