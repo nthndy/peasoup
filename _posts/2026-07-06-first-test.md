@@ -9,10 +9,10 @@ excerpt: "Four days after planting and the phosphate has halved, from 10 ppm dow
 
 Okay update number one. Well, I'd be lying if I said I hadn't been fastidiously checking in every day, but here's the first proper written update. I tested the water again today and we can see a definitive difference in the nutrient loads, indicative that *biology is happening*. The phosphate has halved, going from 10 ppm at planting down to 5 ppm on day four.
 
-![Test kit vials against the colour chart]({{ site.baseurl }}/assets/img/testing_2.jpg)
+![Test kit vials against the colour chart](/assets/img/testing_2.jpg)
 
 That is the oxygenators doing what they are supposed to do: pulling dissolved phosphate straight out of the water column and taking it away from the algae in the process. Four days is a short window and one halving is not a trend, so I want to see it hold. Ammonia and nitrite are both still at zero, and the pH has not moved off 9.
 
 I also added a little water ramp made from some old sun bleached bits of wood I found on a beach years ago so that any bugs and critters that fall in have a way to exit the pond. Not much has changed from day 1 but this is a patient game we are playing here. Wait and see.
 
-![The pond four days after planting]({{ site.baseurl }}/assets/img/all_2.jpg)
+![The pond four days after planting](/assets/img/all_2.jpg)

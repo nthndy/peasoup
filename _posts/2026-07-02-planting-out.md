@@ -3,8 +3,6 @@ title: "Planting out"
 date: 2026-07-02 19:30:00 +0100
 tags: [plants, build]
 excerpt: "Twelve plants went in today, all from Wetland Plants: five oxygenators, two floating, two deep-water and three marginals."
-cover: /assets/img/pond_init.jpg
-cover_alt: "The fountain before any intervention, surrounded by verbena"
 ---
 
 Hello and welcome to my pondblog. I am attempting to turn a chlorine-bleached fountain in my apartment building's garden into a fully natural, self-cleaning pond replete with a variety of native plants and critters. Here is a picture of the fountain prior to any intervention:
