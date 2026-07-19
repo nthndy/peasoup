@@ -291,6 +291,8 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   border: 1px solid var(--green-soft); border-radius: 8px;
 }
 .sponsor-link:hover { background: var(--green-soft); color: var(--ink); }
+.contact { margin-top: 2.5rem; }
+.contact h2 { font-size: 1.35rem; margin: 0 0 .6rem; }
 
 /* --- Wishlist -------------------------------------------------------------- */
 .wish { margin-bottom: 2.5rem; }

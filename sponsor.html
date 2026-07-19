@@ -1,20 +1,24 @@
 ---
 layout: page
-title: Sponsor a plant
+title: Get Involved
 permalink: /sponsor/
-lede: Chip in towards a plant and I'll add it to the pond with your name on the update.
+lede: A shared pond for the whole building — here's how to help it along.
 ---
 {% assign offers = site.data.offers %}
 
 <section class="sponsor-intro">
   <p>
-    Every plant here goes in by hand and gets logged on the
-    <a href="{{ '/plants/' | relative_url }}">plants page</a>. If you fancy backing one,
-    send whatever you like via Monzo and pop the plant's name in the payment reference.
-    I'll plant it, photograph it, and credit you in the next update.
+    See what's already in the pond and how it's doing on the
+    <a href="{{ '/plants/' | relative_url }}">plant status page</a>.
+  </p>
+  <p>
+    This pond is a communal amenity, not a solo project — it's here for
+    everyone in the building to enjoy. If you'd like to help it along, the
+    easiest way is to put something towards the pond fund, which covers new
+    plants, compost and kit as it settles in.
   </p>
   <a class="monzo-btn" href="https://monzo.me/{{ site.monzo }}">
-    Sponsor via Monzo
+    Contribute to the pond fund
   </a>
   <p class="fineprint">Goes to monzo.me/{{ site.monzo }}. Any amount welcome.</p>
 </section>
@@ -47,9 +51,9 @@ lede: Chip in towards a plant and I'll add it to the pond with your name on the 
         </p>
         {% assign ref = item.name | url_encode %}
         {% if item.price_value and item.price_value != 0 %}
-          <a class="sponsor-link" href="https://monzo.me/{{ site.monzo }}/{{ item.price_value }}?d={{ ref }}">Sponsor this · {{ item.price }}</a>
+          <a class="sponsor-link" href="https://monzo.me/{{ site.monzo }}/{{ item.price_value }}?d={{ ref }}">Add to the fund · {{ item.price }}</a>
         {% else %}
-          <a class="sponsor-link" href="https://monzo.me/{{ site.monzo }}?d={{ ref }}">Sponsor this</a>
+          <a class="sponsor-link" href="https://monzo.me/{{ site.monzo }}?d={{ ref }}">Add to the fund</a>
         {% endif %}
       </div>
     </article>
@@ -65,3 +69,25 @@ lede: Chip in towards a plant and I'll add it to the pond with your name on the 
     Always check the <a href="{{ site.supplier_url }}">supplier page</a> before paying.
   </p>
 </section>
+
+<section class="contact">
+  <h2>Contact</h2>
+  <p>
+    Questions about the pond or the fund, or want to get involved another way?
+    <a id="contact-link" href="#">Get in touch by email</a>.
+    <noscript>Enable JavaScript to reveal the address, or ask a neighbour for it.</noscript>
+  </p>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var user = 'nthndy';
+    var domain = ['gmail', 'com'].join('.');
+    var address = user + '@' + domain;
+    var link = document.getElementById('contact-link');
+    if (link) {
+      link.href = 'mailto:' + address;
+      link.textContent = address;
+    }
+  });
+</script>

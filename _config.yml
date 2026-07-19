@@ -10,10 +10,10 @@ author: Nathan Day
 url: "https://nthndy.github.io"
 baseurl: "/peasoup"
 
-# The Monzo handle used across the Sponsor page.
+# The Monzo handle used across the Get Involved page.
 monzo: "nathanday"
 
-# Supplier the Sponsor page links back to.
+# Supplier the Get Involved page links back to.
 supplier_name: "Wetland Plants"
 supplier_url: "https://wetland-plants.co.uk/product-category/special-offers/"
 

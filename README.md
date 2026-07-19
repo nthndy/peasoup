@@ -1,7 +1,7 @@
 # peasoup
 
-A GitHub Pages site for the pond. Blog updates, a plant inventory, water
-chemistry, a wishlist, and a "sponsor a plant" page that pulls live special
+A GitHub Pages site for the pond. Updates, a plant inventory, water
+chemistry, a wishlist, and a "Get Involved" page that pulls live special
 offers from Wetland Plants.
 
 Built with Jekyll, which GitHub Pages compiles for you on every push. Day to
@@ -35,14 +35,14 @@ in `_config.yml`.
 
 Everything below is a plain file edit, then `git commit` and `git push`.
 
-### New blog post
+### New update post
 Add a file to `_posts/` named `YYYY-MM-DD-a-short-slug.md`:
 ```markdown
 ---
 title: "Your title"
 date: 2026-08-01 18:00:00 +0100
 tags: [water, plants]
-excerpt: "One line shown in the blog list."
+excerpt: "One line shown in the updates list."
 # cover: /assets/img/your-photo.jpg   # optional header image
 ---
 
@@ -71,7 +71,7 @@ a log entry is optional.
 Two lists, `plants` and `materials`. Set `got: true` once you have something and
 it shows struck through. `priority` is `high`, `medium`, or `low`.
 
-### Sponsor / offers
+### Get Involved / offers
 The offers grid updates itself from the scraper. The Monzo handle lives in
 `_config.yml` as `monzo:`.
 
@@ -80,7 +80,7 @@ The offers grid updates itself from the scraper. The Monzo handle lives in
 `.github/workflows/scrape-offers.yml` runs `scripts/scrape_offers.py` weekly.
 It reads the supplier's special-offers page, writes `_data/offers.yml`, and
 commits it. The site rebuilds automatically. If the scrape fails, it keeps the
-last good list and records an error the Sponsor page shows quietly.
+last good list and records an error the Get Involved page shows quietly.
 
 To change frequency, edit the `cron` line in the workflow.
 

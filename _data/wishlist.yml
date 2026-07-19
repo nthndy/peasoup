@@ -2,28 +2,160 @@
 # priority: high | medium | low
 # got: true once acquired (leave the entry, it renders struck through)
 # cost: rough estimate in GBP, optional
+# note: optional, per-item. All plants below are from Wetland Plants — the
+#   single link to https://wetland-plants.co.uk lives on the wishlist page
+#   itself rather than per-plant.
 
 plants:
-  - name: White water lily
+  - name: Alba water lily
     latin: Nymphaea alba
     priority: high
-    cost: 18
-    note: Deep-water anchor plant for shade and cover.
-    got: true
+    cost: 15
+    got: false
+
+  - name: Un-named water lily
+    latin: Nymphaea sp.
+    priority: high
+    cost: 10
+    got: false
+
+  - name: Floating heart
+    latin: Nymphoides peltata
+    priority: high
+    cost: 8
+    got: false
+
+  - name: Water mint
+    latin: Mentha aquatica
+    priority: high
+    cost: 4.5
+    got: false
+
+  - name: Mare's tail
+    latin: Hippuris vulgaris
+    priority: medium
+    cost: 5
+    got: false
+
+  - name: Flowering rush
+    latin: Butomus umbellatus
+    priority: medium
+    cost: 4.5
+    got: false
+
+  - name: Marsh marigold
+    latin: Caltha palustris
+    priority: medium
+    cost: 5
+    got: false
+
+  - name: Water forget-me-not
+    latin: Myosotis scorpioides
+    priority: medium
+    cost: 4.5
+    got: false
+
+  - name: Brooklime
+    latin: Veronica beccabunga
+    priority: medium
+    cost: 5
+    got: false
 
   - name: Bog bean
     latin: Menyanthes trifoliata
     priority: medium
-    cost: 6
-    note: For the boggy corner. Good for pollinators.
+    cost: 5
     got: false
 
-  - name: Water soldier
-    latin: Stratiotes aloides
+  - name: Water avens
+    latin: Geum rivale
+    priority: medium
+    cost: 6
+    got: false
+
+  - name: Ragged robin
+    latin: Lychnis flos-cuculi
+    priority: medium
+    cost: 5
+    got: false
+
+  - name: Water plantain
+    latin: Alisma plantago
+    priority: medium
+    cost: 5
+    got: false
+
+  - name: Lesser water plantain
+    latin: Baldellia ranunculoides
+    priority: medium
+    cost: 4.5
+    got: false
+
+  - name: Common arrowhead
+    latin: Sagittaria sagittifolia
+    priority: medium
+    cost: 4
+    got: false
+
+  - name: Lesser pond sedge
+    latin: Carex acutiformis
+    priority: medium
+    cost: 5
+    got: false
+
+  - name: Fibre optic plant
+    latin: Scirpus cernuus
+    priority: medium
+    cost: 5
+    got: false
+
+  - name: Sweet galingale
+    latin: Cyperus longus
+    priority: medium
+    cost: 5
+    got: false
+
+  - name: Common rush
+    latin: Juncus effusus
+    priority: medium
+    cost: 5
+    got: false
+
+  - name: Hard rush
+    latin: Juncus inflexus
+    priority: medium
+    cost: 4.5
+    got: false
+
+  - name: Pendulous sedge
+    latin: Carex pendula
+    priority: medium
+    cost: 4.5
+    got: false
+
+  - name: Water violet
+    latin: Hottonia palustris
     priority: low
-    cost: 7
-    note: Native floater, but invasive if it escapes. Undecided.
-    got: true
+    cost: 8
+    got: false
+
+  - name: Common water crowfoot
+    latin: Ranunculus aquatilis
+    priority: low
+    cost: 4.5
+    got: false
+
+  - name: Water starwort
+    latin: Callitriche sp.
+    priority: low
+    cost: 4.5
+    got: false
+
+  - name: Hornwort
+    latin: Ceratophyllum demersum
+    priority: low
+    cost: 5
+    got: false
 
 materials:
   - name: Aquatic planting baskets (x5)
