@@ -5,9 +5,9 @@
 # there is no separate top-level status/checked field any more.
 #
 # checks[].status: one of  planted | thriving | steady | struggling | lost
-#   planted    = light green, just went in, no verdict yet
+#   planted    = mauve,       just went in, no verdict yet
 #   thriving   = green,        growing well
-#   steady     = mauve,        holding, no change
+#   steady     = light green, holding, no change
 #   struggling = magenta,      needs attention
 #   lost       = grey,         died / removed (kept for the record)
 #
@@ -60,6 +60,12 @@
   notes: Native. Weighted bunch, placed just below the water line until established. Planting depth 15-45cm.
   init_photo: /assets/img/callitriche_init.jpg
   checks:
+    - date: 2026-07-19
+      status: struggling
+      note: >-
+        Only a few stems anchored. Took the floating clump and moved it onto
+        one of the fountain tiers, since it prefers flowing water. Watching
+        whether it takes.
     - date: 2026-07-11
       status: struggling
       note: Not anchoring itself. Viability uncertain.
@@ -74,6 +80,9 @@
   notes: British native. Aquatic to 30cm or as a marginal. Label warns it can be invasive.
   init_photo: /assets/img/mares_init.jpg
   checks:
+    - date: 2026-07-19
+      status: thriving
+      note: Spreading out, doing well.
     - date: 2026-07-06
       status: steady
       note: Adapting well.
@@ -88,6 +97,9 @@
   notes: Cotton bud grass. Up to 10cm of water. Acts as an oxygenator. Height 25-30cm, spread 50cm.
   init_photo: /assets/img/fibreoptic_init.jpg
   checks:
+    - date: 2026-07-19
+      status: steady
+      note: Raised out of the water a bit during the clear-out.
     - date: 2026-07-06
       status: steady
       note: Adapting well.
@@ -119,6 +131,9 @@
   notes: Native. 30-60cm of water above soil, full sun to partial shade. Flowers June-Aug.
   init_photo: /assets/img/nymphoides_init.jpg
   checks:
+    - date: 2026-07-19
+      status: thriving
+      note: Root system sending up new stems. Spreading well.
     - date: 2026-07-11
       status: steady
       note: Anchoring well and sending up new pads, but some older pads rotting and want grooming.
@@ -133,6 +148,9 @@
   notes: Rhizome planted at 45 degrees, weighted with pea gravel, full sun.
   init_photo: /assets/img/alba_lily_init.jpg
   checks:
+    - date: 2026-07-19
+      status: thriving
+      note: Spreading out a lot now, rearranged to give it room.
     - date: 2026-07-15
       status: thriving
       note: Going absolutely nuts. Several new pads this week.
@@ -178,6 +196,9 @@
   notes: Native shallow water plant. 0-10cm above soil. Flowers May-Aug.
   init_photo: /assets/img/beccabunga_init.jpg
   checks:
+    - date: 2026-07-19
+      status: thriving
+      note: Raised out of the water slightly during the clear-out. Still sending up new shoots.
     - date: 2026-07-15
       status: thriving
       note: Sending up new shoots.
@@ -206,6 +227,9 @@
   notes: Spreading perennial. Flowers June-Aug. Up to 15cm of water, height to 8cm.
   init_photo: /assets/img/jenny_init.jpg
   checks:
+    - date: 2026-07-19
+      status: steady
+      note: Algae building up on the leaves, so raised it out of the water a bit.
     - date: 2026-07-06
       status: steady
       note: Adapting well.

@@ -25,7 +25,7 @@ I also spotted what I think is a shield bug on one of the rushes, happily sunnin
 
 ![Shield bug on the rushes]({{ site.baseurl }}/assets/img/bug_15jul.jpg)
 
-And a bonus pic of a humble pigeon drinking from the central fountain.
+And a bonus pic of a humble pigeon drinking from the central fountain, where you can see the general state of the (greening) pond.
 
 ![A pigeon drinking from the fountain]({{ site.baseurl }}/assets/img/pigeon_15jul.jpg)
 
