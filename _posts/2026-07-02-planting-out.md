@@ -68,6 +68,10 @@ Finally, I added two grasses, lesser pond sedge (*Carex acutiformis*) and the fu
 
 ![Fibre optic plant]({{ site.baseurl }}/assets/img/fibreoptic_init.jpg)
 
-I also planted a creeping jenny (*Lysimachia nummularia* 'Aurea') but forgot to take a photo of that individually. Here is what everything looks like together, creeping jenny is the yellow plant. Now to wait and see.
+I also planted a creeping jenny (*Lysimachia nummularia* 'Aurea').
+
+![Creeping jenny]({{ site.baseurl }}/assets/img/jenny_init.jpg)
+
+Here is what everything looks like together, creeping jenny is the yellow plant. Now to wait and see.
 
 ![Everything in together]({{ site.baseurl }}/assets/img/all_init.jpg)

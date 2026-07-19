@@ -44,11 +44,13 @@ lede: Pond chemistry, tested by hand. Colour shows each value against its safe b
 </section>
 
 {%- comment -%}
-  Chart geometry. Two stacked charts sharing one x scale (readings spaced
-  evenly left to right, oldest to newest). Axis ranges come from
-  targets[key].range in _data/water.yml so they scale automatically as
-  targets change; the point layout scales automatically as readings are
-  added, since x position is a fraction of (count - 1).
+  Four separate charts, one per variable, sharing one x scale (readings
+  spaced evenly left to right, oldest to newest). Each variable's y-axis
+  range comes from targets[key].range in _data/water.yml, and the safe band
+  from targets[key].safe, so both scale automatically as targets change.
+  Point layout scales automatically as readings are added, since x position
+  is a fraction of (count - 1). Liquid's dynamic `hash[var]` lookup lets one
+  loop generate all four charts instead of repeating the block four times.
 {%- endcomment -%}
 {%- assign log_asc = site.data.water.log | reverse -%}
 {%- assign n = log_asc.size -%}
@@ -60,154 +62,80 @@ lede: Pond chemistry, tested by hand. Colour shows each value against its safe b
 {%- assign plotw = vw | minus: left | minus: right -%}
 {%- assign right_edge = vw | minus: right -%}
 
-{%- comment -%} Chart 1: ammonia / nitrite / phosphate share one ppm axis, built from the union of their target ranges. {%- endcomment -%}
-{%- assign ch1 = 200 -%}
-{%- assign t1 = 14 -%}
-{%- assign b1 = 14 -%}
-{%- assign ph1 = ch1 | minus: t1 | minus: b1 -%}
-{%- assign base1 = ch1 | minus: b1 -%}
-{%- assign c1_min = ta.range[0] | at_most: tn.range[0] | at_most: tp.range[0] -%}
-{%- assign c1_max = ta.range[1] | at_least: tn.range[1] | at_least: tp.range[1] -%}
-{%- assign c1_span = c1_max | minus: c1_min | times: 1.0 -%}
-
-{%- comment -%} Chart 2: pH on its own axis. {%- endcomment -%}
-{%- assign ch2 = 160 -%}
-{%- assign t2 = 14 -%}
-{%- assign b2 = 34 -%}
-{%- assign ph2 = ch2 | minus: t2 | minus: b2 -%}
-{%- assign base2 = ch2 | minus: b2 -%}
-{%- assign c2_min = th.range[0] -%}
-{%- assign c2_max = th.range[1] -%}
-{%- assign c2_span = c2_max | minus: c2_min | times: 1.0 -%}
-
-{%- comment -%} Safe-band rects for chart 1 (drawn under the lines). {%- endcomment -%}
-{%- assign a_top = ta.safe[1] | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-{%- assign a_bot = ta.safe[0] | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-{%- assign a_band_y = 1 | minus: a_top | times: ph1 | plus: t1 -%}
-{%- assign a_band_y2 = 1 | minus: a_bot | times: ph1 | plus: t1 -%}
-{%- assign a_band_h = a_band_y2 | minus: a_band_y -%}
-
-{%- assign n_top = tn.safe[1] | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-{%- assign n_bot = tn.safe[0] | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-{%- assign n_band_y = 1 | minus: n_top | times: ph1 | plus: t1 -%}
-{%- assign n_band_y2 = 1 | minus: n_bot | times: ph1 | plus: t1 -%}
-{%- assign n_band_h = n_band_y2 | minus: n_band_y -%}
-
-{%- assign p_top = tp.safe[1] | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-{%- assign p_bot = tp.safe[0] | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-{%- assign p_band_y = 1 | minus: p_top | times: ph1 | plus: t1 -%}
-{%- assign p_band_y2 = 1 | minus: p_bot | times: ph1 | plus: t1 -%}
-{%- assign p_band_h = p_band_y2 | minus: p_band_y -%}
-
-{%- comment -%} Safe-band rect for chart 2. {%- endcomment -%}
-{%- assign h_top = th.safe[1] | minus: c2_min | times: 1.0 | divided_by: c2_span | at_least: 0 | at_most: 1 -%}
-{%- assign h_bot = th.safe[0] | minus: c2_min | times: 1.0 | divided_by: c2_span | at_least: 0 | at_most: 1 -%}
-{%- assign h_band_y = 1 | minus: h_top | times: ph2 | plus: t2 -%}
-{%- assign h_band_y2 = 1 | minus: h_bot | times: ph2 | plus: t2 -%}
-{%- assign h_band_h = h_band_y2 | minus: h_band_y -%}
-
-{%- comment -%} Build the polyline point strings, one pass over the readings. {%- endcomment -%}
-{%- assign pts_ammonia = "" -%}
-{%- assign pts_nitrite = "" -%}
-{%- assign pts_phosphate = "" -%}
-{%- assign pts_ph = "" -%}
-{%- for r in log_asc -%}
-  {%- assign i = forloop.index0 -%}
-  {%- if n_minus_1 > 0 -%}
-    {%- assign xf = i | times: 1.0 | divided_by: n_minus_1 -%}
-  {%- else -%}
-    {%- assign xf = 0.5 -%}
-  {%- endif -%}
-  {%- assign x = xf | times: plotw | plus: left | round: 2 -%}
-
-  {%- assign af = r.ammonia | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-  {%- assign ay = 1 | minus: af | times: ph1 | plus: t1 | round: 2 -%}
-  {%- assign pts_ammonia = pts_ammonia | append: x | append: "," | append: ay | append: " " -%}
-
-  {%- assign nf = r.nitrite | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-  {%- assign ny = 1 | minus: nf | times: ph1 | plus: t1 | round: 2 -%}
-  {%- assign pts_nitrite = pts_nitrite | append: x | append: "," | append: ny | append: " " -%}
-
-  {%- assign pf = r.phosphate | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-  {%- assign py = 1 | minus: pf | times: ph1 | plus: t1 | round: 2 -%}
-  {%- assign pts_phosphate = pts_phosphate | append: x | append: "," | append: py | append: " " -%}
-
-  {%- assign hf = r.ph | minus: c2_min | times: 1.0 | divided_by: c2_span | at_least: 0 | at_most: 1 -%}
-  {%- assign hy = 1 | minus: hf | times: ph2 | plus: t2 | round: 2 -%}
-  {%- assign pts_ph = pts_ph | append: x | append: "," | append: hy | append: " " -%}
-{%- endfor -%}
+{%- assign ch = 190 -%}
+{%- assign top = 14 -%}
+{%- assign bottom = 34 -%}
+{%- assign plotph = ch | minus: top | minus: bottom -%}
+{%- assign base = ch | minus: bottom -%}
 
 <section class="water-charts">
-  <div class="chart-wrap">
-    <p class="chart-title">Ammonia · nitrite · phosphate (ppm)</p>
-    <svg class="chart-svg" viewBox="0 0 {{ vw }} {{ ch1 }}" role="img" aria-label="Ammonia, nitrite and phosphate over time, in parts per million">
-      <rect class="chart-band--phosphate" x="{{ left }}" y="{{ p_band_y }}" width="{{ plotw }}" height="{{ p_band_h }}" fill-opacity="0.10"></rect>
-      <rect class="chart-band--ammonia" x="{{ left }}" y="{{ a_band_y }}" width="{{ plotw }}" height="{{ a_band_h }}" fill-opacity="0.18"></rect>
-      <rect class="chart-band--nitrite" x="{{ left }}" y="{{ n_band_y }}" width="{{ plotw }}" height="{{ n_band_h }}" fill-opacity="0.18"></rect>
-      <line class="chart-axis-line" x1="{{ left }}" y1="{{ t1 }}" x2="{{ left }}" y2="{{ base1 }}"></line>
-      <line class="chart-axis-line" x1="{{ left }}" y1="{{ base1 }}" x2="{{ right_edge }}" y2="{{ base1 }}"></line>
-      <text x="{{ left | minus: 6 }}" y="{{ t1 | plus: 4 }}" text-anchor="end">{{ c1_max }}</text>
-      <text x="{{ left | minus: 6 }}" y="{{ base1 }}" text-anchor="end">{{ c1_min }}</text>
-      <polyline class="chart-line series--phosphate" points="{{ pts_phosphate }}"></polyline>
-      <polyline class="chart-line series--nitrite" points="{{ pts_nitrite }}"></polyline>
-      <polyline class="chart-line series--ammonia" points="{{ pts_ammonia }}"></polyline>
-      {%- for r in log_asc -%}
-        {%- assign i = forloop.index0 -%}
-        {%- if n_minus_1 > 0 -%}
-          {%- assign xf = i | times: 1.0 | divided_by: n_minus_1 -%}
-        {%- else -%}
-          {%- assign xf = 0.5 -%}
-        {%- endif -%}
-        {%- assign x = xf | times: plotw | plus: left | round: 2 -%}
+  {%- assign var_keys = "ammonia,nitrite,phosphate,ph" | split: "," -%}
+  {%- for v in var_keys -%}
+    {%- assign t = site.data.water.targets[v] -%}
+    {%- assign vmin = t.range[0] -%}
+    {%- assign vmax = t.range[1] -%}
+    {%- assign vspan = vmax | minus: vmin | times: 1.0 -%}
 
-        {%- assign af = r.ammonia | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-        {%- assign ay = 1 | minus: af | times: ph1 | plus: t1 | round: 2 -%}
-        <circle class="chart-dot series--ammonia" cx="{{ x }}" cy="{{ ay }}" r="3"><title>{{ r.date | date: "%-d %b %Y" }} — ammonia {{ r.ammonia }} ppm</title></circle>
+    {%- assign label = "" -%}
+    {%- case v -%}
+      {%- when "ammonia" -%}{%- assign label = "Ammonia" -%}
+      {%- when "nitrite" -%}{%- assign label = "Nitrite" -%}
+      {%- when "phosphate" -%}{%- assign label = "Phosphate" -%}
+      {%- when "ph" -%}{%- assign label = "pH" -%}
+    {%- endcase -%}
+    {%- assign unit_suffix = "" -%}
+    {%- if t.unit != "" -%}{%- assign unit_suffix = " (" | append: t.unit | append: ")" -%}{%- endif -%}
+    {%- assign chart_title = label | append: unit_suffix -%}
 
-        {%- assign nf = r.nitrite | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-        {%- assign ny = 1 | minus: nf | times: ph1 | plus: t1 | round: 2 -%}
-        <circle class="chart-dot series--nitrite" cx="{{ x }}" cy="{{ ny }}" r="3"><title>{{ r.date | date: "%-d %b %Y" }} — nitrite {{ r.nitrite }} ppm</title></circle>
+    {%- assign safe_top = t.safe[1] | minus: vmin | times: 1.0 | divided_by: vspan | at_least: 0 | at_most: 1 -%}
+    {%- assign safe_bot = t.safe[0] | minus: vmin | times: 1.0 | divided_by: vspan | at_least: 0 | at_most: 1 -%}
+    {%- assign band_y = 1 | minus: safe_top | times: plotph | plus: top -%}
+    {%- assign band_y2 = 1 | minus: safe_bot | times: plotph | plus: top -%}
+    {%- assign band_h = band_y2 | minus: band_y -%}
 
-        {%- assign pf = r.phosphate | minus: c1_min | times: 1.0 | divided_by: c1_span | at_least: 0 | at_most: 1 -%}
-        {%- assign py = 1 | minus: pf | times: ph1 | plus: t1 | round: 2 -%}
-        <circle class="chart-dot series--phosphate" cx="{{ x }}" cy="{{ py }}" r="3"><title>{{ r.date | date: "%-d %b %Y" }} — phosphate {{ r.phosphate }} ppm</title></circle>
-      {%- endfor -%}
-    </svg>
-    <div class="chart-legend">
-      <span class="chart-legend-item"><span class="chart-legend-dot series--ammonia"></span>Ammonia</span>
-      <span class="chart-legend-item"><span class="chart-legend-dot series--nitrite"></span>Nitrite</span>
-      <span class="chart-legend-item"><span class="chart-legend-dot series--phosphate"></span>Phosphate</span>
+    {%- comment -%} Build the polyline point string in one pass, oldest to newest. {%- endcomment -%}
+    {%- assign pts = "" -%}
+    {%- for r in log_asc -%}
+      {%- assign i = forloop.index0 -%}
+      {%- if n_minus_1 > 0 -%}
+        {%- assign xf = i | times: 1.0 | divided_by: n_minus_1 -%}
+      {%- else -%}
+        {%- assign xf = 0.5 -%}
+      {%- endif -%}
+      {%- assign x = xf | times: plotw | plus: left | round: 2 -%}
+      {%- assign val = r[v] -%}
+      {%- assign vf = val | minus: vmin | times: 1.0 | divided_by: vspan | at_least: 0 | at_most: 1 -%}
+      {%- assign y = 1 | minus: vf | times: plotph | plus: top | round: 2 -%}
+      {%- assign pts = pts | append: x | append: "," | append: y | append: " " -%}
+    {%- endfor -%}
+
+    <div class="chart-wrap">
+      <p class="chart-title">{{ chart_title }}</p>
+      <svg class="chart-svg" viewBox="0 0 {{ vw }} {{ ch }}" role="img" aria-label="{{ label }} over time{{ unit_suffix }}">
+        <rect class="chart-band--{{ v }}" x="{{ left }}" y="{{ band_y }}" width="{{ plotw }}" height="{{ band_h }}" fill-opacity="0.16"></rect>
+        <text class="chart-safe-label" x="{{ left | plus: 6 }}" y="{{ band_y | plus: 11 }}">safe</text>
+        <line class="chart-axis-line" x1="{{ left }}" y1="{{ top }}" x2="{{ left }}" y2="{{ base }}"></line>
+        <line class="chart-axis-line" x1="{{ left }}" y1="{{ base }}" x2="{{ right_edge }}" y2="{{ base }}"></line>
+        <text x="{{ left | minus: 6 }}" y="{{ top | plus: 4 }}" text-anchor="end">{{ vmax }}</text>
+        <text x="{{ left | minus: 6 }}" y="{{ base }}" text-anchor="end">{{ vmin }}</text>
+        <polyline class="chart-line series--{{ v }}" points="{{ pts }}"></polyline>
+        {%- for r in log_asc -%}
+          {%- assign i = forloop.index0 -%}
+          {%- if n_minus_1 > 0 -%}
+            {%- assign xf = i | times: 1.0 | divided_by: n_minus_1 -%}
+          {%- else -%}
+            {%- assign xf = 0.5 -%}
+          {%- endif -%}
+          {%- assign x = xf | times: plotw | plus: left | round: 2 -%}
+          {%- assign val = r[v] -%}
+          {%- assign vf = val | minus: vmin | times: 1.0 | divided_by: vspan | at_least: 0 | at_most: 1 -%}
+          {%- assign y = 1 | minus: vf | times: plotph | plus: top | round: 2 -%}
+          <circle class="chart-dot series--{{ v }}" cx="{{ x }}" cy="{{ y }}" r="3.5"><title>{{ r.date | date: "%-d %b %Y" }} — {{ label }} {{ val }}{{ unit_suffix }}</title></circle>
+          <text x="{{ x }}" y="{{ base | plus: 14 }}" text-anchor="end" transform="rotate(-40 {{ x }} {{ base | plus: 14 }})">{{ r.date | date: "%-d %b" }}</text>
+        {%- endfor -%}
+      </svg>
     </div>
-  </div>
-
-  <div class="chart-wrap">
-    <p class="chart-title">pH</p>
-    <svg class="chart-svg" viewBox="0 0 {{ vw }} {{ ch2 }}" role="img" aria-label="pH over time">
-      <rect class="chart-band--ph" x="{{ left }}" y="{{ h_band_y }}" width="{{ plotw }}" height="{{ h_band_h }}" fill-opacity="0.14"></rect>
-      <line class="chart-axis-line" x1="{{ left }}" y1="{{ t2 }}" x2="{{ left }}" y2="{{ base2 }}"></line>
-      <line class="chart-axis-line" x1="{{ left }}" y1="{{ base2 }}" x2="{{ right_edge }}" y2="{{ base2 }}"></line>
-      <text x="{{ left | minus: 6 }}" y="{{ t2 | plus: 4 }}" text-anchor="end">{{ c2_max }}</text>
-      <text x="{{ left | minus: 6 }}" y="{{ base2 }}" text-anchor="end">{{ c2_min }}</text>
-      <polyline class="chart-line series--ph" points="{{ pts_ph }}"></polyline>
-      {%- for r in log_asc -%}
-        {%- assign i = forloop.index0 -%}
-        {%- if n_minus_1 > 0 -%}
-          {%- assign xf = i | times: 1.0 | divided_by: n_minus_1 -%}
-        {%- else -%}
-          {%- assign xf = 0.5 -%}
-        {%- endif -%}
-        {%- assign x = xf | times: plotw | plus: left | round: 2 -%}
-
-        {%- assign hf = r.ph | minus: c2_min | times: 1.0 | divided_by: c2_span | at_least: 0 | at_most: 1 -%}
-        {%- assign hy = 1 | minus: hf | times: ph2 | plus: t2 | round: 2 -%}
-        <circle class="chart-dot series--ph" cx="{{ x }}" cy="{{ hy }}" r="3"><title>{{ r.date | date: "%-d %b %Y" }} — pH {{ r.ph }}</title></circle>
-        <text x="{{ x }}" y="{{ base2 | plus: 14 }}" text-anchor="end" transform="rotate(-40 {{ x }} {{ base2 | plus: 14 }})">{{ r.date | date: "%-d %b" }}</text>
-      {%- endfor -%}
-    </svg>
-    <div class="chart-legend">
-      <span class="chart-legend-item"><span class="chart-legend-dot series--ph"></span>pH</span>
-    </div>
-  </div>
+  {%- endfor -%}
 </section>
 
 <section class="water-history">

@@ -30,7 +30,12 @@ lede: Everything currently in the pond, with its status at the last health check
     <div class="plant-grid">
       {% for p in group %}
       {% assign latest = p.checks | first %}
-      <article class="plant status--{{ latest.status }}">
+      <article class="plant status--{{ latest.status }}{% if p.init_photo %} plant--clickable{% endif %}">
+        {% if p.init_photo %}
+        <button type="button" class="plant-trigger" data-photo="{{ p.init_photo | relative_url }}" data-photo-alt="{{ p.name }} shortly after planting">
+          <span class="visually-hidden">View {{ p.name }} planting photo</span>
+        </button>
+        {% endif %}
         <div class="plant-body">
           <div class="plant-title">
             <span class="status-dot" title="{{ latest.status }}"></span>
@@ -66,3 +71,51 @@ lede: Everything currently in the pond, with its status at the last health check
   </section>
   {% endif %}
 {% endfor %}
+
+<div class="lightbox" id="plant-lightbox" hidden>
+  <div class="lightbox-backdrop" data-close></div>
+  <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Planting photo">
+    <button type="button" class="lightbox-close" data-close aria-label="Close">&times;</button>
+    <img class="lightbox-img" id="plant-lightbox-img" src="" alt="">
+  </div>
+</div>
+
+<script>
+(function () {
+  var lightbox = document.getElementById('plant-lightbox');
+  var img = document.getElementById('plant-lightbox-img');
+  var lastTrigger = null;
+
+  function openLightbox(trigger) {
+    var src = trigger.getAttribute('data-photo');
+    if (!src) { return; }
+    img.src = src;
+    img.alt = trigger.getAttribute('data-photo-alt') || '';
+    lastTrigger = trigger;
+    lightbox.hidden = false;
+    lightbox.querySelector('.lightbox-close').focus();
+    document.addEventListener('keydown', onKeydown);
+  }
+
+  function closeLightbox() {
+    lightbox.hidden = true;
+    img.src = '';
+    document.removeEventListener('keydown', onKeydown);
+    if (lastTrigger) { lastTrigger.focus(); }
+  }
+
+  function onKeydown(event) {
+    if (event.key === 'Escape' || event.key === 'Esc') {
+      closeLightbox();
+    }
+  }
+
+  document.querySelectorAll('.plant-trigger').forEach(function (trigger) {
+    trigger.addEventListener('click', function () { openLightbox(trigger); });
+  });
+
+  Array.prototype.forEach.call(lightbox.querySelectorAll('[data-close]'), function (el) {
+    el.addEventListener('click', closeLightbox);
+  });
+})();
+</script>

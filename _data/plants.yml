@@ -17,13 +17,16 @@
 #
 # zone: marginal | oxygenator | floating | deep-water | bog
 # added: date the plant went in (YYYY-MM-DD)
-# There is no plant-level `photo` any more — photos live on individual checks.
+# init_photo: optional path under /assets/img/ to that plant's initial
+#   planting photo, shown as a popover when its card is clicked. Omit
+#   entirely if there's no matching photo — don't leave it blank.
 
 - name: Hornwort
   latin: Ceratophyllum demersum
   zone: oxygenator
   added: 2026-07-02
   notes: Weighted bunch. Throw on the surface and it sinks, or push into soil.
+  init_photo: /assets/img/hornwort_init.jpg
   checks:
     - date: 2026-07-11
       status: steady
@@ -55,6 +58,7 @@
   zone: oxygenator
   added: 2026-07-02
   notes: Native. Weighted bunch, placed just below the water line until established. Planting depth 15-45cm.
+  init_photo: /assets/img/callitriche_init.jpg
   checks:
     - date: 2026-07-11
       status: struggling
@@ -68,6 +72,7 @@
   zone: oxygenator
   added: 2026-07-02
   notes: British native. Aquatic to 30cm or as a marginal. Label warns it can be invasive.
+  init_photo: /assets/img/mares_init.jpg
   checks:
     - date: 2026-07-06
       status: steady
@@ -81,6 +86,7 @@
   zone: oxygenator
   added: 2026-07-02
   notes: Cotton bud grass. Up to 10cm of water. Acts as an oxygenator. Height 25-30cm, spread 50cm.
+  init_photo: /assets/img/fibreoptic_init.jpg
   checks:
     - date: 2026-07-06
       status: steady
@@ -94,6 +100,7 @@
   zone: floating
   added: 2026-07-02
   notes: Perennial, flowers July, full sun, hardy. Drops straight in at 30cm. Sinks over winter.
+  init_photo: /assets/img/water_soldier_init.jpg
   checks:
     - date: 2026-07-11
       status: lost
@@ -110,6 +117,7 @@
   zone: floating
   added: 2026-07-02
   notes: Native. 30-60cm of water above soil, full sun to partial shade. Flowers June-Aug.
+  init_photo: /assets/img/nymphoides_init.jpg
   checks:
     - date: 2026-07-11
       status: steady
@@ -123,6 +131,7 @@
   zone: deep-water
   added: 2026-07-02
   notes: Rhizome planted at 45 degrees, weighted with pea gravel, full sun.
+  init_photo: /assets/img/alba_lily_init.jpg
   checks:
     - date: 2026-07-15
       status: thriving
@@ -139,6 +148,7 @@
   zone: deep-water
   added: 2026-07-02
   notes: Water knotweed. Native. Better in deep water but tolerates damp. Flowers July-Sept, planting depth 15-90cm.
+  init_photo: /assets/img/knotweed_init.jpg
   checks:
     - date: 2026-07-06
       status: steady
@@ -152,6 +162,7 @@
   zone: marginal
   added: 2026-07-02
   notes: Height 90cm, spread 45cm. Full sun, hardy. Planting depth 5-45cm above soil.
+  init_photo: /assets/img/flowering_rush_init.jpg
   checks:
     - date: 2026-07-06
       status: steady
@@ -165,6 +176,7 @@
   zone: marginal
   added: 2026-07-02
   notes: Native shallow water plant. 0-10cm above soil. Flowers May-Aug.
+  init_photo: /assets/img/beccabunga_init.jpg
   checks:
     - date: 2026-07-15
       status: thriving
@@ -178,6 +190,7 @@
   zone: marginal
   added: 2026-07-02
   notes: Native shallow water plant. Up to 15cm above soil. Height to 123cm, flowers June-Aug, shade tolerant.
+  init_photo: /assets/img/carex_init.jpg
   checks:
     - date: 2026-07-06
       status: steady
@@ -191,6 +204,7 @@
   zone: marginal
   added: 2026-07-02
   notes: Spreading perennial. Flowers June-Aug. Up to 15cm of water, height to 8cm.
+  init_photo: /assets/img/jenny_init.jpg
   checks:
     - date: 2026-07-06
       status: steady
