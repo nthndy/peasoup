@@ -7,9 +7,11 @@ excerpt: "A diverse cast of different ecological players appear, some good, some
 
 So we have critters to report and a water update. Critters first then chemistry second.
 
-I was super pleased to spot a real, legit dragonfly zipping around above the pond. I was even more pleased that I managed to catch its silhouette from a distance on my phone camera.
+I was super pleased to spot a legit dragonfly zipping around above the pond. I was even more pleased that I managed to catch its silhouette from a distance on my phone camera.
 
 ![Dragonfly over the garden]({{ site.baseurl }}/assets/img/dragonfly_15jul.jpg)
+
+![Dragonfly, zoomed in]({{ site.baseurl }}/assets/img/dragonfly_zoom_15jul.jpg)
 
 This is super good news from an ecological balance perspective, as well as just a general curiosity. I love these prehistoric looking creatures and marvel at the fact that their giant relatives, the griffinflies, grew up to 75cm across around 300 million years ago. Their presence is super encouraging, especially given their role near the top of the pond food chain. As underwater larvae, they are apex invertebrate predators. Interestingly, they will spend most of their life beneath the surface, often a year or two submerged versus only weeks as flying adults. Their unique hinged jaw can shoot out to ambush prey such as mosquito larvae.
 
