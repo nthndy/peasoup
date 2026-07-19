@@ -19,7 +19,7 @@ Speaking of which, unfortunately I noticed mosquito larvae proliferating in a fe
 
 ![Larvae in the water]({{ site.baseurl }}/assets/img/mos_15jul.jpg)
 
-Despite their unwanted presence, they are still quite interesting creatures. Instantly recognisable from their inverted swimming positions where they stick their tail out of the surface to breathe and immediately wriggle down in a frantic manner to escape when the surface is disturbed. I will destroy them all with my bacilli thermo...
+Despite their unwanted presence, they are still quite interesting creatures. Instantly recognisable from their inverted swimming positions where they stick their tail out of the surface to breathe and immediately wriggle down in a frantic manner to escape when the surface is disturbed. I will destroy them all with my bacilli.
 
 I also spotted what I think is a shield bug on one of the rushes, happily sunning itself in the heat.
 
