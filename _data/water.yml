@@ -14,7 +14,7 @@
 targets:
   ammonia:   { unit: "ppm", safe: [0, 0.25],  warn: [0, 1.0], range: [0, 8] }
   nitrite:   { unit: "ppm", safe: [0, 0.25],  warn: [0, 1.0], range: [0, 5] }
-  phosphate: { unit: "ppm", safe: [0, 1.0],   warn: [0, 3.0], range: [0, 10] }
+  phosphate: { unit: "ppm", safe: [0, 1.0],   warn: [0, 5.0], range: [0, 10] }
   ph:        { unit: "",    safe: [6.5, 8.5], warn: [6.0, 9.0], range: [5, 9] }
 
 log:
@@ -24,9 +24,9 @@ log:
     phosphate: 5
     ph: 9
     note: >-
-      Ammonia and nitrite both up from zero: the pond is cycling after the
-      extra oxygenators went in and the water soldier died back. Phosphate
-      still down at 5 since planting. pH unmoved.
+      Ammonia and nitrite both up from zero: the pond is cycling as the
+      water soldier and some hornwort die back and start to decompose.
+      Phosphate still down at 5 since planting. pH unmoved.
 
   - date: 2026-07-06
     ammonia: 0

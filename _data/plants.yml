@@ -5,11 +5,11 @@
 # there is no separate top-level status/checked field any more.
 #
 # checks[].status: one of  planted | thriving | steady | struggling | lost
-#   planted    = grey,    just went in, no verdict yet
-#   thriving   = green,   growing well
-#   steady     = mauve,   holding, no change
-#   struggling = magenta, needs attention
-#   lost       = grey,    died / removed (kept for the record)
+#   planted    = light green, just went in, no verdict yet
+#   thriving   = green,        growing well
+#   steady     = mauve,        holding, no change
+#   struggling = magenta,      needs attention
+#   lost       = grey,         died / removed (kept for the record)
 #
 # checks[].note: optional.
 # checks[].photos: optional list of paths under /assets/img/. Most checks
@@ -25,9 +25,14 @@
   added: 2026-07-02
   notes: Weighted bunch. Throw on the surface and it sinks, or push into soil.
   checks:
+    - date: 2026-07-11
+      status: steady
+      note: >-
+        The three bunches added on the 8th melted away within days — the
+        heat and the pH of 9 did for them. The original planting is holding.
     - date: 2026-07-08
       status: thriving
-      note: Three more bunches added from the aquarium centre.
+      note: Three more bunches added to bulk up the oxygenators.
     - date: 2026-07-02
       status: planted
       note: Planted out.
@@ -113,8 +118,8 @@
       status: planted
       note: Planted out.
 
-- name: Un-named water lily
-  latin: Nymphaea
+- name: Alba lily
+  latin: Nymphaea alba
   zone: deep-water
   added: 2026-07-02
   notes: Rhizome planted at 45 degrees, weighted with pea gravel, full sun.
@@ -193,13 +198,3 @@
     - date: 2026-07-02
       status: planted
       note: Planted out.
-
-- name: Elodea densa
-  latin: Egeria densa
-  zone: oxygenator
-  added: 2026-07-08
-  notes: Two bunches from the aquarium centre. Not a UK native — keep contained.
-  checks:
-    - date: 2026-07-08
-      status: planted
-      note: Two bunches added alongside the extra hornwort.

@@ -5,23 +5,11 @@ tags: [plants, build]
 excerpt: "Twelve plants went in today, all from Wetland Plants: five oxygenators, two floating, two deep-water and three marginals."
 ---
 
-Hello and welcome to my pondblog. I am attempting to turn a chlorine-bleached fountain in my apartment building's garden into a fully natural, self-cleaning pond replete with a variety of native plants and critters. Here is a picture of the fountain prior to any intervention:
+With the fountain scrubbed, refilled and dechlorinated, and the Legionnaires' test back negative, it was time for the fun part: plants. But first, one more look at the water.
 
-![The fountain before any intervention]({{ site.baseurl }}/assets/img/pond_init.jpg)
+Four days on from the refill, and before anything went in, I tested again.
 
-As you can see, we are very lucky to have such a beautiful garden (thank you Gerry for all the hard work) but I've always felt that the central water feature stands somewhat juxtaposed to the green lush oasis in the middle of central London. The fountain used to have fish in, but now it's quite the opposite: if a leaf is dropped in there it becomes a ghostly skeleton within a couple of days, and birds refuse to bathe and drink in it.
-
-The first step of converting this fountain is to reduce the intense chlorine load in the pond. We did this by completely draining the pond and replacing with tap water (ideally this would have been rain water, but we can't wait forever for the skies to open to a biblical extent). As we are using standard tap water, we needed to add dechlorinating solution. Chlorine will naturally evaporate but the chloramine needs a helping hand to be removed from solution. Chloramine is chlorine bonded to ammonia, which makes it more stable and means it does not gas off the way free chlorine does. If it were still present, no life would thrive in this sanitised environment, and it would also take out the beneficial bacteria that run the nitrogen cycle.
-
-![The drained fountain]({{ site.baseurl }}/assets/img/empty_init.jpg)
-
-After the pond was refilled and dechlorinated, I ran a few tests to get an initial idea of nutrient load and safety.
-
-![Test kit vials against the colour chart]({{ site.baseurl }}/assets/img/testing_init.jpg)
-
-![Legionnaires' test]({{ site.baseurl }}/assets/img/legion_test_init.jpg)
-
-I can confirm, writing this a week or so later, that the Legionnaires' test came back negative. The chemistry was a mixed bag:
+![Test kit vials against the colour chart]({{ site.baseurl }}/assets/img/testing_2.jpg)
 
 | | reading |
 |---|---|
@@ -30,17 +18,19 @@ I can confirm, writing this a week or so later, that the Legionnaires' test came
 | Nitrite | 0 ppm |
 | Phosphate | 10 ppm |
 
-Ammonia and nitrite at zero is what you want from fresh tap water: nothing has started decomposing yet, so there is nothing for the nitrogen cycle to chew on. The other two are less comfortable. London tap runs hard and alkaline, but it comes out at 7 to 8, not 9, and the extra point is most likely the concrete leaching lime. Phosphate is at the top of the chart at 10 ppm, which is the currency algae trades in. I had tested a couple of days earlier, before the refill, and it was the same 10 then.
+No real movement from the baseline: still zero ammonia and nitrite, still 10 ppm phosphate, still a stubborn pH of 9. Nothing living in there yet to shift the numbers. Time to change that.
 
-The next step was to start adding plants. First came the oxygenators, which do two jobs at once. They photosynthesise entirely underwater, so they put oxygen straight into the water column rather than into the air above it. They also feed the same way: bathed in water, they absorb dissolved nitrates and phosphates across their whole leaf and stem surface, not just through roots. That is the competition. Anything the plants take up is nutrient the single-celled algae does not get, and starving the algae out is the strategy here. They do respire in the dark like everything else, so they give oxygen back by day and take it away by night.
+The plants came from Wetland Plants, and I put them in roughly in order of how far underwater they live. First came the oxygenators, which do two jobs at once. They photosynthesise entirely underwater, so they put oxygen straight into the water column rather than into the air above it. They also feed the same way: bathed in water, they absorb dissolved nitrates and phosphates across their whole leaf and stem surface, not just through roots. That is the competition. Anything the plants take up is nutrient the single-celled algae does not get, and starving the algae out is the strategy here. They do respire in the dark like everything else, so they give oxygen back by day and take it away by night.
+
+The first oxygenator was hornwort (*Ceratophyllum demersum*).
 
 ![Hornwort going in]({{ site.baseurl }}/assets/img/hornwort_init.jpg)
 
-Then I threw in the interesting specimen of water soldier (*Stratiotes aloides*), which will bob down in the winter and emerge to the surface in the summer to flower. It looks like the top of a pineapple that has been thrown in a pond, and it is a relative of frogbit. It is a calciphile, and gradually gets encrusted with lime; as growth slows in autumn that ballast takes it down to overwinter on the bottom, out of reach of the frost. In spring the fresh growth is lighter than water and it rises again. When free-floating its roots can trail a metre down, which is what keeps it sitting upright.
+Then I threw in the interesting specimen of water soldier (*Stratiotes aloides*), which will bob down in the winter and emerge to the surface in the summer to flower. It is a member of the frogbit family, Hydrocharitaceae. It is a calciphile, and gradually gets encrusted with lime; as growth slows in autumn that ballast takes it down to overwinter on the bottom, out of reach of the frost. In spring the fresh growth is lighter than water and it rises again. When free-floating its roots can trail a metre down, which is what keeps it sitting upright.
 
 ![Water soldier rosette]({{ site.baseurl }}/assets/img/water_soldier_init.jpg)
 
-Then I started planting the deep water plants. Starting with the un-named lily, I weigh down the mesh baskets with river stones (it's important to get the right type of stone so that it doesn't leach lime into the water, thereby increasing the pH to toxic levels).
+Then I started planting the deep water plants. Starting with the alba lily (*Nymphaea alba*), I weigh down the mesh baskets with river stones (it's important to get the right type of stone so that it doesn't leach lime into the water, thereby increasing the pH to toxic levels).
 
 ![River stones for weighting the baskets]({{ site.baseurl }}/assets/img/stones_init.jpg)
 
@@ -48,24 +38,36 @@ I then fill the basket with specialised pond compost, which has a silty quality 
 
 ![The lily basket in place]({{ site.baseurl }}/assets/img/alba_lily_init.jpg)
 
-Then I proceeded with the *Nymphoides peltata*, or floating heart, which has a curious ability to float freely or be anchored in the soil. I went for the latter, but it was difficult to establish where the root system versus the plant actually was.
+Then I proceeded with the floating heart (*Nymphoides peltata*), which has a curious ability to float freely or be anchored in the soil. I went for the latter, but it was difficult to establish where the root system versus the plant actually was.
 
 ![Floating heart]({{ site.baseurl }}/assets/img/nymphoides_init.jpg)
 
+Next was the willow grass (*Persicaria amphibia*), which when fully established should send up pretty pink flower stems above the surface of the water.
+
 ![Willow grass]({{ site.baseurl }}/assets/img/knotweed_init.jpg)
+
+The flowering rush (*Butomus umbellatus*) is another grassy marginal that will eventually blossom into clusters of delicate white and pink petaled flowers.
 
 ![Flowering rush]({{ site.baseurl }}/assets/img/flowering_rush_init.jpg)
 
+Mare's tail (*Hippuris vulgaris*) is an interesting prehistoric looking plant that carries some warnings about how quickly it can spread, being a somewhat (native but) invasive species. Should be noted this species is different from the field horsetail (*Equisetum arvense*), which is a notoriously deep rhizomed land weed.
+
 ![Mare's tail]({{ site.baseurl }}/assets/img/mares_init.jpg)
+
+Water starwort (*Callitriche* sp.) is another tricky to plant specimen with no clear root structure, could be sunk in as a freely floating oxygenator but I decided to anchor it in a small pot.
 
 ![Water starwort]({{ site.baseurl }}/assets/img/callitriche_init.jpg)
 
+Brooklime (*Veronica beccabunga*) has my favourite name but looks the messiest upon planting, couldn't quite see where the rhizomes end and the foliage begins.
+
 ![Brooklime]({{ site.baseurl }}/assets/img/beccabunga_init.jpg)
+
+Finally, I added two grasses, lesser pond sedge (*Carex acutiformis*) and the fun named fibre optic plant (*Scirpus cernuus*).
 
 ![Lesser pond sedge]({{ site.baseurl }}/assets/img/carex_init.jpg)
 
 ![Fibre optic plant]({{ site.baseurl }}/assets/img/fibreoptic_init.jpg)
 
-I also planted a creeping jenny but forgot to take a photo of that individually. Here is what everything looks like together. Now to wait and see.
+I also planted a creeping jenny (*Lysimachia nummularia* 'Aurea') but forgot to take a photo of that individually. Here is what everything looks like together, creeping jenny is the yellow plant. Now to wait and see.
 
 ![Everything in together]({{ site.baseurl }}/assets/img/all_init.jpg)
