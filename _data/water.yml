@@ -19,15 +19,15 @@ targets:
 
 log:
   - date: 2026-07-19
-      ammonia: 0.25
-      nitrite: 0
-      phosphate: 1
-      ph: 9
-      note: >-
-        Big improvement across the board despite a full algal bloom. Nitrite
-        cleared to zero and ammonia falling as the cycle catches up; phosphate
-        down to 1 ppm, the lowest yet, after a clear-out of decaying matter.
-        pH still stuck at 9.
+    ammonia: 0.25
+    nitrite: 0
+    phosphate: 1
+    ph: 9
+    note: >-
+      Big improvement across the board despite a full algal bloom. Nitrite
+      cleared to zero and ammonia falling as the cycle catches up; phosphate
+      down to 1 ppm, the lowest yet, after a clear-out of decaying matter.
+      pH still stuck at 9.
 
   - date: 2026-07-15
     ammonia: 2
