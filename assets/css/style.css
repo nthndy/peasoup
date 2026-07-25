@@ -346,7 +346,11 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .chart-svg { width: 100%; height: auto; display: block; overflow: visible; }
 .chart-svg text { font-family: var(--font-mono); font-size: 9px; fill: var(--ink-soft); }
 .chart-axis-line { stroke: var(--line); stroke-width: 1; }
-.chart-line { fill: none; stroke-width: 2; }
+.chart-line { fill: none; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.chart-line.series--ammonia,
+.chart-line.series--nitrite,
+.chart-line.series--phosphate,
+.chart-line.series--ph { fill: none; }
 .chart-dot { stroke: #fff; stroke-width: 1.5; }
 .chart-safe-label { font-size: 8px; text-transform: uppercase; letter-spacing: .05em; opacity: .8; }
 .series--ammonia   { stroke: var(--green-deep); fill: var(--green-deep); }

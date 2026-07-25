@@ -130,7 +130,7 @@ lede: Pond chemistry, tested by hand. Colour shows each value against its safe b
           {%- assign val = r[v] -%}
           {%- assign vf = val | minus: vmin | times: 1.0 | divided_by: vspan | at_least: 0 | at_most: 1 -%}
           {%- assign y = 1 | minus: vf | times: plotph | plus: top | round: 2 -%}
-          <circle class="chart-dot series--{{ v }}" cx="{{ x }}" cy="{{ y }}" r="3.5"><title>{{ r.date | date: "%-d %b %Y" }} — {{ label }} {{ val }}{{ unit_suffix }}</title></circle>
+          <circle class="chart-dot series--{{ v }}" cx="{{ x }}" cy="{{ y }}" r="4"><title>{{ r.date | date: "%-d %b %Y" }} — {{ label }} {{ val }}{{ unit_suffix }}</title></circle>
           <text x="{{ x }}" y="{{ base | plus: 14 }}" text-anchor="end" transform="rotate(-40 {{ x }} {{ base | plus: 14 }})">{{ r.date | date: "%-d %b" }}</text>
         {%- endfor -%}
       </svg>
