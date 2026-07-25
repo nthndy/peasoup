@@ -118,10 +118,17 @@ lede: Everything currently in the pond, with its status at the last health check
             {% endif %}
           {% endfor %}
           {% if p.init_photo %}
+          {% assign added_date_str = p.added | date: "%Y-%m-%d" %}
+          {% assign planting_post_url = nil %}
+          {% for post in site.posts %}
+            {% assign post_date_str = post.date | date: "%Y-%m-%d" %}
+            {% if post_date_str == added_date_str %}{% assign planting_post_url = post.url %}{% endif %}
+          {% endfor %}
           <div class="carousel-slide">
             <img src="{{ p.init_photo | relative_url }}" alt="{{ p.name }} shortly after planting">
             <div class="carousel-caption">
               <span class="carousel-date">Planted, {{ p.added | date: "%-d %b %Y" }}</span>
+              {% if planting_post_url %}<a class="carousel-post-link" href="{{ planting_post_url | relative_url }}">Read the post &rarr;</a>{% endif %}
             </div>
           </div>
           {% endif %}
