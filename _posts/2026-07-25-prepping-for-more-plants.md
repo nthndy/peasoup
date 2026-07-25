@@ -30,7 +30,7 @@ As well as the presence of ostracods and snails, one key difference between the 
 
 And here are the latest test results from the fountain pond.
 
-![Fountain pond test results]({{ site.baseurl }}/assets/img/testing_25jul.jpg)
+![Fountain pond test results]({{ site.baseurl }}/assets/img/fountain_testing_25jul.jpg)
 
 | | 19 Jul | 25 Jul |
 |---|---|---|
