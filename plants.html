@@ -5,11 +5,11 @@ permalink: /plants/
 lede: Everything currently in the pond, with its status at the last health check.
 ---
 <ul class="legend">
-  <li class="status status--planted"><span class="status-dot"></span>Planted</li>
-  <li class="status status--thriving"><span class="status-dot"></span>Thriving</li>
-  <li class="status status--steady"><span class="status-dot"></span>Steady</li>
-  <li class="status status--struggling"><span class="status-dot"></span>Struggling</li>
-  <li class="status status--lost"><span class="status-dot"></span>Lost</li>
+  <li class="status status--planted"><span class="status-dot status--planted"></span>Planted</li>
+  <li class="status status--thriving"><span class="status-dot status--thriving"></span>Thriving</li>
+  <li class="status status--steady"><span class="status-dot status--steady"></span>Steady</li>
+  <li class="status status--struggling"><span class="status-dot status--struggling"></span>Struggling</li>
+  <li class="status status--lost"><span class="status-dot status--lost"></span>Lost</li>
 </ul>
 
 {% assign zones = "marginal,oxygenator,floating,deep-water,bog" | split: "," %}
@@ -44,7 +44,7 @@ lede: Everything currently in the pond, with its status at the last health check
         {% endif %}
         <div class="plant-body">
           <div class="plant-title">
-            <span class="status-dot" title="{{ latest.status }}"></span>
+            <span class="status-dot status--{{ latest.status }}" title="{{ latest.status }}"></span>
             <h3>{{ p.name }}</h3>
           </div>
           <p class="latin">{{ p.latin }}</p>
@@ -88,7 +88,7 @@ lede: Everything currently in the pond, with its status at the last health check
             {% for c in p.checks %}
             <li class="plant-check">
               <span class="plant-check-date">{{ c.date | date: "%-d %b %Y" }}</span>
-              <span class="status status--{{ c.status }}"><span class="status-dot"></span><span class="cap">{{ c.status }}</span></span>
+              <span class="status status--{{ c.status }}"><span class="status-dot status--{{ c.status }}"></span><span class="cap">{{ c.status }}</span></span>
               {% if c.note %}<p class="plant-check-note">{{ c.note }}</p>{% endif %}
             </li>
             {% endfor %}
@@ -109,7 +109,7 @@ lede: Everything currently in the pond, with its status at the last health check
                 <img src="{{ photo | relative_url }}" alt="{{ p.name }}, {{ c.date | date: "%-d %b %Y" }}">
                 <div class="carousel-caption">
                   <span class="carousel-date">{{ c.date | date: "%-d %b %Y" }}</span>
-                  <span class="status status--{{ c.status }}"><span class="status-dot"></span><span class="cap">{{ c.status }}</span></span>
+                  <span class="status status--{{ c.status }}"><span class="status-dot status--{{ c.status }}"></span><span class="cap">{{ c.status }}</span></span>
                   {% if c.note %}<p class="carousel-note">{{ c.note }}</p>{% endif %}
                   {% if post_url %}<a class="carousel-post-link" href="{{ post_url | relative_url }}">Read the post &rarr;</a>{% endif %}
                 </div>
