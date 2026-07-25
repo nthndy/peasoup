@@ -158,10 +158,16 @@ plants:
     got: false
 
 materials:
-  - name: Aquatic planting baskets (x5)
+  - name: Large aquatic basket
     priority: high
-    cost: 12
-    note: Mesh, various sizes for marginals.
+    cost: 1.50
+    note: Mesh, 22cm round.
+    got: true
+
+  - name: Small aquatic basket
+    priority: high
+    cost: 0.80
+    note: Mesh, 11cm square.
     got: true
 
   - name: Aquatic compost
@@ -174,10 +180,4 @@ materials:
     priority: medium
     cost: 5
     note: To line the mesh baskets.
-    got: false
-
-  - name: Solar pump / small fountain head
-    priority: low
-    cost: 35
-    note: Optional. A little surface movement for oxygen without a mains run.
     got: false
