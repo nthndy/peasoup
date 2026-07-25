@@ -244,6 +244,21 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .plant-meta dt { font-family: var(--font-mono); font-size: .66rem; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-soft); margin: 0; }
 .plant-meta dd { margin: 0; font-size: .85rem; }
 
+.plant-preview { position: relative; margin: .7rem 0 0; }
+.plant-preview-track { display: flex; gap: .35rem; overflow: hidden; }
+.plant-preview-track img {
+  flex: 0 0 auto; width: 56px; height: 56px; object-fit: cover;
+  border-radius: 6px; border: 1px solid var(--line);
+}
+.plant-preview-more {
+  display: none; position: absolute; top: 0; right: 0; width: 28px; height: 56px;
+  align-items: center; justify-content: flex-end; padding-right: .25rem;
+  font-size: 1.3rem; line-height: 1; color: #fff;
+  background: linear-gradient(to right, transparent, var(--ink) 65%);
+  border-radius: 0 6px 6px 0; pointer-events: none;
+}
+.plant-preview--overflow .plant-preview-more { display: flex; }
+
 /* --- Plant photo lightbox --------------------------------------------------- */
 .lightbox {
   position: fixed; inset: 0; z-index: 100;

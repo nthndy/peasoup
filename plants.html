@@ -54,6 +54,24 @@ lede: Everything currently in the pond, with its status at the last health check
             <div><dt>Checked</dt><dd>{{ latest.date | date: "%-d %b %Y" }}</dd></div>
             <div><dt>Status</dt><dd class="cap">{{ latest.status }}</dd></div>
           </dl>
+          {% if has_photos %}
+          <div class="plant-preview">
+            <div class="plant-preview-track">
+              {% if p.init_photo %}
+              <img src="{{ p.init_photo | relative_url }}" alt="{{ p.name }} shortly after planting">
+              {% endif %}
+              {% assign checks_chronological = p.checks | reverse %}
+              {% for c in checks_chronological %}
+                {% if c.photos %}
+                  {% for photo in c.photos %}
+                  <img src="{{ photo | relative_url }}" alt="{{ p.name }}, {{ c.date | date: "%-d %b %Y" }}">
+                  {% endfor %}
+                {% endif %}
+              {% endfor %}
+            </div>
+            <span class="plant-preview-more" aria-hidden="true">&rsaquo;</span>
+          </div>
+          {% endif %}
           <ol class="plant-history">
             {% for c in p.checks %}
             <li class="plant-check">
@@ -205,6 +223,21 @@ lede: Everything currently in the pond, with its status at the last health check
     trigger.addEventListener('click', function () {
       openCarousel(trigger.closest('.plant'), trigger);
     });
+  });
+
+  function updatePreviewOverflow() {
+    document.querySelectorAll('.plant-preview').forEach(function (preview) {
+      var previewTrack = preview.querySelector('.plant-preview-track');
+      if (!previewTrack) { return; }
+      var overflowing = previewTrack.scrollWidth > previewTrack.clientWidth + 1;
+      preview.classList.toggle('plant-preview--overflow', overflowing);
+    });
+  }
+  updatePreviewOverflow();
+  var resizeTimer;
+  window.addEventListener('resize', function () {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(updatePreviewOverflow, 150);
   });
 
   prevBtn.addEventListener('click', showPrev);
