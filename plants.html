@@ -30,10 +30,16 @@ lede: Everything currently in the pond, with its status at the last health check
     <div class="plant-grid">
       {% for p in group %}
       {% assign latest = p.checks | first %}
-      <article class="plant status--{{ latest.status }}{% if p.init_photo %} plant--clickable{% endif %}">
-        {% if p.init_photo %}
-        <button type="button" class="plant-trigger" data-photo="{{ p.init_photo | relative_url }}" data-photo-alt="{{ p.name }} shortly after planting">
-          <span class="visually-hidden">View {{ p.name }} planting photo</span>
+      {% assign slug = p.name | slugify %}
+      {% assign has_photos = false %}
+      {% if p.init_photo %}{% assign has_photos = true %}{% endif %}
+      {% for c in p.checks %}
+        {% if c.photos and c.photos.size > 0 %}{% assign has_photos = true %}{% endif %}
+      {% endfor %}
+      <article id="plant-{{ slug }}" class="plant status--{{ latest.status }}{% if has_photos %} plant--clickable{% endif %}">
+        {% if has_photos %}
+        <button type="button" class="plant-trigger">
+          <span class="visually-hidden">View {{ p.name }} photo history</span>
         </button>
         {% endif %}
         <div class="plant-body">
@@ -65,6 +71,39 @@ lede: Everything currently in the pond, with its status at the last health check
             {% endfor %}
           </ol>
         </div>
+        {% if has_photos %}
+        <template class="plant-carousel-data">
+          {% for c in p.checks %}
+            {% if c.photos and c.photos.size > 0 %}
+              {% assign c_date_str = c.date | date: "%Y-%m-%d" %}
+              {% assign post_url = nil %}
+              {% for post in site.posts %}
+                {% assign p_date_str = post.date | date: "%Y-%m-%d" %}
+                {% if p_date_str == c_date_str %}{% assign post_url = post.url %}{% endif %}
+              {% endfor %}
+              {% for photo in c.photos %}
+              <div class="carousel-slide">
+                <img src="{{ photo | relative_url }}" alt="{{ p.name }}, {{ c.date | date: "%-d %b %Y" }}">
+                <div class="carousel-caption">
+                  <span class="carousel-date">{{ c.date | date: "%-d %b %Y" }}</span>
+                  <span class="status status--{{ c.status }}"><span class="status-dot"></span><span class="cap">{{ c.status }}</span></span>
+                  {% if c.note %}<p class="carousel-note">{{ c.note }}</p>{% endif %}
+                  {% if post_url %}<a class="carousel-post-link" href="{{ post_url | relative_url }}">Read the post &rarr;</a>{% endif %}
+                </div>
+              </div>
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+          {% if p.init_photo %}
+          <div class="carousel-slide">
+            <img src="{{ p.init_photo | relative_url }}" alt="{{ p.name }} shortly after planting">
+            <div class="carousel-caption">
+              <span class="carousel-date">Planted, {{ p.added | date: "%-d %b %Y" }}</span>
+            </div>
+          </div>
+          {% endif %}
+        </template>
+        {% endif %}
       </article>
       {% endfor %}
     </div>
@@ -74,48 +113,103 @@ lede: Everything currently in the pond, with its status at the last health check
 
 <div class="lightbox" id="plant-lightbox" hidden>
   <div class="lightbox-backdrop" data-close></div>
-  <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Planting photo">
+  <div class="lightbox-dialog lightbox-dialog--plant" role="dialog" aria-modal="true" aria-labelledby="plant-lightbox-title">
     <button type="button" class="lightbox-close" data-close aria-label="Close">&times;</button>
-    <img class="lightbox-img" id="plant-lightbox-img" src="" alt="">
+    <div class="carousel-header">
+      <h3 id="plant-lightbox-title"></h3>
+      <p class="latin" id="plant-lightbox-latin"></p>
+    </div>
+    <div class="carousel-viewport">
+      <button type="button" class="carousel-nav carousel-nav--prev" data-carousel-prev aria-label="Previous photo">&#8249;</button>
+      <div class="carousel-track" id="plant-lightbox-track"></div>
+      <button type="button" class="carousel-nav carousel-nav--next" data-carousel-next aria-label="Next photo">&#8250;</button>
+    </div>
+    <div class="carousel-dots" id="plant-lightbox-dots"></div>
   </div>
 </div>
 
 <script>
 (function () {
   var lightbox = document.getElementById('plant-lightbox');
-  var img = document.getElementById('plant-lightbox-img');
+  var titleEl = document.getElementById('plant-lightbox-title');
+  var latinEl = document.getElementById('plant-lightbox-latin');
+  var track = document.getElementById('plant-lightbox-track');
+  var dots = document.getElementById('plant-lightbox-dots');
+  var prevBtn = lightbox.querySelector('[data-carousel-prev]');
+  var nextBtn = lightbox.querySelector('[data-carousel-next]');
   var lastTrigger = null;
+  var slides = [];
+  var index = 0;
 
-  function openLightbox(trigger) {
-    var src = trigger.getAttribute('data-photo');
-    if (!src) { return; }
-    img.src = src;
-    img.alt = trigger.getAttribute('data-photo-alt') || '';
+  function renderSlide() {
+    slides.forEach(function (slide, i) { slide.hidden = i !== index; });
+    Array.prototype.forEach.call(dots.children, function (dot, i) {
+      dot.setAttribute('aria-current', i === index ? 'true' : 'false');
+    });
+    var multi = slides.length > 1;
+    prevBtn.hidden = !multi;
+    nextBtn.hidden = !multi;
+    dots.hidden = !multi;
+  }
+
+  function showPrev() { if (!slides.length) { return; } index = (index - 1 + slides.length) % slides.length; renderSlide(); }
+  function showNext() { if (!slides.length) { return; } index = (index + 1) % slides.length; renderSlide(); }
+
+  function openCarousel(article, trigger) {
+    var template = article.querySelector('.plant-carousel-data');
+    if (!template) { return; }
+    track.innerHTML = '';
+    dots.innerHTML = '';
+    track.appendChild(template.content.cloneNode(true));
+    slides = Array.prototype.slice.call(track.querySelectorAll('.carousel-slide'));
+    slides.forEach(function (_, i) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'carousel-dot';
+      dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+      dot.addEventListener('click', function () { index = i; renderSlide(); });
+      dots.appendChild(dot);
+    });
+
+    var titleSource = article.querySelector('.plant-title h3');
+    var latinSource = article.querySelector('.latin');
+    titleEl.textContent = titleSource ? titleSource.textContent : '';
+    latinEl.textContent = latinSource ? latinSource.textContent : '';
+
+    index = 0;
+    renderSlide();
     lastTrigger = trigger;
     lightbox.hidden = false;
     lightbox.querySelector('.lightbox-close').focus();
     document.addEventListener('keydown', onKeydown);
   }
 
-  function closeLightbox() {
+  function closeCarousel() {
     lightbox.hidden = true;
-    img.src = '';
+    track.innerHTML = '';
+    dots.innerHTML = '';
+    slides = [];
     document.removeEventListener('keydown', onKeydown);
     if (lastTrigger) { lastTrigger.focus(); }
   }
 
   function onKeydown(event) {
-    if (event.key === 'Escape' || event.key === 'Esc') {
-      closeLightbox();
-    }
+    if (event.key === 'Escape' || event.key === 'Esc') { closeCarousel(); }
+    if (event.key === 'ArrowLeft') { showPrev(); }
+    if (event.key === 'ArrowRight') { showNext(); }
   }
 
   document.querySelectorAll('.plant-trigger').forEach(function (trigger) {
-    trigger.addEventListener('click', function () { openLightbox(trigger); });
+    trigger.addEventListener('click', function () {
+      openCarousel(trigger.closest('.plant'), trigger);
+    });
   });
 
+  prevBtn.addEventListener('click', showPrev);
+  nextBtn.addEventListener('click', showNext);
+
   Array.prototype.forEach.call(lightbox.querySelectorAll('[data-close]'), function (el) {
-    el.addEventListener('click', closeLightbox);
+    el.addEventListener('click', closeCarousel);
   });
 })();
 </script>

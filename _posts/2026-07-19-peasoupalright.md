@@ -9,7 +9,7 @@ Quick update post-heatwave. We've got a veritable pea soup on our hands.
 
 ![The fountain gone properly green]({{ site.baseurl }}/assets/img/all_peasoup_19jul.jpg)
 
-I tested the water again today, just for fun. I'm getting ready to buy a batch more plants to reduce the algae, I'm thinking several lilies and a few marginal grasses, and perhaps a few more creeping jenny. Cleared a lot of the decaying organic matter out today too, which should take some of the nutrient load out with it.
+I tested the water again today, just for fun. I'm getting ready to buy a batch more plants to reduce the algae, I'm thinking several lilies and a few marginal grasses, and perhaps a few more [creeping jenny]({{ site.baseurl }}/plants/#plant-creeping-jenny). Cleared a lot of the decaying organic matter out today too, which should take some of the nutrient load out with it.
 
 ![Test kit vials against the colour chart]({{ site.baseurl }}/assets/img/testing_19jul.jpg)
 
@@ -26,12 +26,12 @@ Genuinely encouraging, despite the green water. Ammonia has dropped from 2 ppm b
 
 The one number that won't budge is the pH, still stubbornly at 9 after four weeks. That remains the outstanding issue, almost certainly the concrete leaching lime, and the one thing the plants can't fix on their own.
 
-I did a bit of rearranging, as the lily is spreading out quite a lot now, as are the floating hearts and mare's tail. The creeping jenny had a lot of algae on the leaves so I raised it out of the water a bit, along with the *Veronica beccabunga* and the fibre optic.
+I did a bit of rearranging, as the [lily]({{ site.baseurl }}/plants/#plant-alba-lily) is spreading out quite a lot now, as are the [floating hearts]({{ site.baseurl }}/plants/#plant-floating-heart) and [mare's tail]({{ site.baseurl }}/plants/#plant-mare-s-tail). The [creeping jenny]({{ site.baseurl }}/plants/#plant-creeping-jenny) had a lot of algae on the leaves so I raised it out of the water a bit, along with the [*Veronica beccabunga*]({{ site.baseurl }}/plants/#plant-brooklime) and the [fibre optic]({{ site.baseurl }}/plants/#plant-fibre-optic-plant).
 
 ![The pond after rearranging and clearing out]({{ site.baseurl }}/assets/img/all_19jul.jpg)
 
-Good to see the floating hearts (*Nymphoides peltata*) are actually thriving. Here's a pic showing their root system sending up new stems.
+Good to see the [floating hearts]({{ site.baseurl }}/plants/#plant-floating-heart) (*Nymphoides peltata*) are actually thriving. Here's a pic showing their root system sending up new stems.
 
 ![Floating heart root system sending up new stems]({{ site.baseurl }}/assets/img/floating_heart_19jul.jpg)
 
-Finally, I'm still a bit unsure of the progress of the water starwort (*Callitriche* sp.). Only a few stems seemed to be anchored, so I took the floating clump and placed it on one of the fountain tiers, as apparently it appreciates a flowing-water environment.
+Finally, I'm still a bit unsure of the progress of the [water starwort]({{ site.baseurl }}/plants/#plant-water-starwort) (*Callitriche* sp.). Only a few stems seemed to be anchored, so I took the floating clump and placed it on one of the fountain tiers, as apparently it appreciates a flowing-water environment.

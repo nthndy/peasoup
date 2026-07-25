@@ -40,4 +40,4 @@ Finally, a bit of chemistry now. We're seeing the first real movements in nitrit
 
 The obvious culprits here are the lost vegetation reported in the previous post. All that organic matter breaking down into ammonia feeds this cycle that should eventually turn into nitrite and then the fertilising nitrate. Nitrite is not good news for aquatic animal life (fish) but is fine in these amounts for a plant and insect pond. Phosphate and pH largely the same.
 
-Finally, a few notes to say that the lily is still absolutely thriving and the beccabunga is sending up strong vertical growth as new shoots. Great stuff to see.
+Finally, a few notes to say that the [lily]({{ site.baseurl }}/plants/#plant-alba-lily) is still absolutely thriving and the [beccabunga]({{ site.baseurl }}/plants/#plant-brooklime) is sending up strong vertical growth as new shoots. Great stuff to see.

@@ -254,10 +254,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .lightbox-dialog {
   position: relative; z-index: 1; max-width: min(90vw, 720px); max-height: 90vh;
 }
-.lightbox-img {
-  display: block; width: 100%; height: auto; max-height: 90vh; object-fit: contain;
-  border-radius: var(--radius); box-shadow: var(--shadow); background: #fff;
-}
 .lightbox-close {
   position: absolute; top: -.75rem; right: -.75rem; width: 2.25rem; height: 2.25rem;
   display: flex; align-items: center; justify-content: center;
@@ -265,6 +261,48 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   font-size: 1.4rem; line-height: 1; cursor: pointer;
 }
 .lightbox-close:hover { background: var(--magenta); }
+
+/* --- Plant photo carousel (expanded card view) ------------------------------ */
+.lightbox-dialog--plant {
+  width: min(94vw, 640px); max-height: 90vh;
+  background: #fff; border-radius: var(--radius); box-shadow: var(--shadow);
+  padding: 1.5rem 1.5rem 1.25rem; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 1rem;
+}
+.carousel-header h3 { margin: 0; font-size: 1.3rem; }
+.carousel-header .latin { margin: .1rem 0 0; }
+.carousel-viewport { position: relative; display: flex; align-items: center; gap: .5rem; }
+.carousel-track { flex: 1; min-width: 0; }
+.carousel-slide[hidden] { display: none; }
+.carousel-slide img {
+  width: 100%; max-height: 55vh; object-fit: contain;
+  border-radius: var(--radius); background: #f4f5f2;
+}
+.carousel-caption { margin-top: .6rem; }
+.carousel-date { font-family: var(--font-mono); font-size: .78rem; color: var(--ink-soft); margin-right: .5rem; }
+.carousel-caption .status { font-size: .8rem; }
+.carousel-note { margin: .4rem 0 0; font-size: .92rem; color: var(--ink-soft); }
+.carousel-post-link { display: inline-block; margin-top: .4rem; font-size: .88rem; text-decoration: none; }
+.carousel-nav {
+  flex: 0 0 auto; width: 2.25rem; height: 2.25rem; border-radius: 50%;
+  border: 1px solid var(--line); background: #fff; color: var(--ink);
+  font-size: 1.3rem; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.carousel-nav:hover { background: var(--green-soft); }
+.carousel-nav[hidden] { display: none; }
+.carousel-dots { display: flex; justify-content: center; gap: .4rem; }
+.carousel-dots[hidden] { display: none; }
+.carousel-dot {
+  width: 8px; height: 8px; padding: 0; border-radius: 50%;
+  border: 1px solid var(--grey); background: var(--grey); cursor: pointer;
+}
+.carousel-dot[aria-current="true"] { background: var(--green-deep); border-color: var(--green-deep); }
+
+@media (max-width: 620px) {
+  .lightbox-dialog--plant { padding: 1.25rem 1rem 1rem; }
+  .carousel-slide img { max-height: 40vh; }
+}
 
 .plant-history { list-style: none; margin: .9rem 0 0; padding: .8rem 0 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: .7rem; }
 .plant-check { font-size: .85rem; }
