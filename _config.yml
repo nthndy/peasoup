@@ -22,6 +22,9 @@ markdown: kramdown
 permalink: /blog/:year/:month/:day/:title/
 timezone: Europe/London
 
+plugins:
+  - jekyll-feed
+
 
 # Files Jekyll should ignore.
 exclude:
