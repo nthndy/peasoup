@@ -28,6 +28,16 @@
   notes: Weighted bunch. Throw on the surface and it sinks, or push into soil.
   init_photo: /assets/img/hornwort_init.jpg
   checks:
+    - date: 2026-07-25
+      status: struggling
+      note: >-
+        Dark olive rather than vibrant green, with a pale crust on the older
+        growth — biogenic decalcification, calcium carbonate precipitating
+        onto the leaves as it strips bicarbonate at pH 9, compounded by
+        filamentous algae shading it. Still producing new shoots at the tips.
+        Plan is a bulk reorder rather than a rescue.
+      photos:
+        - /assets/img/oxygenators_25jul.jpg
     - date: 2026-07-11
       status: steady
       note: >-
@@ -80,6 +90,13 @@
   notes: British native. Aquatic to 30cm or as a marginal. Label warns it can be invasive.
   init_photo: /assets/img/mares_init.jpg
   checks:
+    - date: 2026-07-25
+      status: thriving
+      note: >-
+        Excellent health, roughly quadrupled in size since planting. Best
+        performer in the pond so far.
+      photos:
+        - /assets/img/mares_25jul.jpg
     - date: 2026-07-19
       status: thriving
       note: Spreading out, doing well.
@@ -97,6 +114,11 @@
   notes: Cotton bud grass. Up to 10cm of water. Acts as an oxygenator. Height 25-30cm, spread 50cm.
   init_photo: /assets/img/fibreoptic_init.jpg
   checks:
+    - date: 2026-07-25
+      status: thriving
+      note: One of the strongest performers. Ordering more in the next batch.
+      photos:
+        - /assets/img/fibreoptic_25jul.jpg
     - date: 2026-07-19
       status: steady
       note: Raised out of the water a bit during the clear-out.
@@ -131,6 +153,13 @@
   notes: Native. 30-60cm of water above soil, full sun to partial shade. Flowers June-Aug.
   init_photo: /assets/img/nymphoides_init.jpg
   checks:
+    - date: 2026-07-25
+      status: thriving
+      note: >-
+        Still putting up new shoots and pads continuously. Decaying leaves
+        groomed off regularly to keep the nutrient load out of the water.
+      photos:
+        - /assets/img/floating_heart_25jul.jpg
     - date: 2026-07-19
       status: thriving
       note: Root system sending up new stems. Spreading well.
@@ -148,6 +177,14 @@
   notes: Rhizome planted at 45 degrees, weighted with pea gravel, full sun.
   init_photo: /assets/img/alba_lily_init.jpg
   checks:
+    - date: 2026-07-25
+      status: steady
+      note: >-
+        On the health watch list. Several pads on very long stems are dying
+        back and are being removed as they rot, but new shoots are still
+        coming up steadily. Long petioles suggest it may be sitting too deep.
+      photos:
+        - /assets/img/alba_lily_25jul.jpg
     - date: 2026-07-19
       status: thriving
       note: Spreading out a lot now, rearranged to give it room.
@@ -168,6 +205,11 @@
   notes: Water knotweed. Native. Better in deep water but tolerates damp. Flowers July-Sept, planting depth 15-90cm.
   init_photo: /assets/img/knotweed_init.jpg
   checks:
+    - date: 2026-07-25
+      status: thriving
+      note: Looking good. Candidate for the next batch of plants.
+      photos:
+        - /assets/img/knotweed_25jul.jpg
     - date: 2026-07-06
       status: steady
       note: Adapting well.
@@ -182,6 +224,14 @@
   notes: Height 90cm, spread 45cm. Full sun, hardy. Planting depth 5-45cm above soil.
   init_photo: /assets/img/flowering_rush_init.jpg
   checks:
+    - date: 2026-07-25
+      status: steady
+      note: >-
+        Doing alright but not as strong as the carex. No flower this year,
+        which is normal for a first season after planting — looks to be
+        putting its reserves into root establishment.
+      photos:
+        - /assets/img/flowering_rush_25jul.jpg
     - date: 2026-07-06
       status: steady
       note: Adapting well.
@@ -196,6 +246,14 @@
   notes: Native shallow water plant. 0-10cm above soil. Flowers May-Aug.
   init_photo: /assets/img/beccabunga_init.jpg
   checks:
+    - date: 2026-07-25
+      status: steady
+      note: >-
+        Scorched by the hot weather since being raised out of the water, with
+        less coverage around the crown. On a warning watch, but still sending
+        up vertical shoots.
+      photos:
+        - /assets/img/beccabunga_25jul.jpg
     - date: 2026-07-19
       status: thriving
       note: Raised out of the water slightly during the clear-out. Still sending up new shoots.
@@ -213,6 +271,13 @@
   notes: Native shallow water plant. Up to 15cm above soil. Height to 123cm, flowers June-Aug, shade tolerant.
   init_photo: /assets/img/carex_init.jpg
   checks:
+    - date: 2026-07-25
+      status: thriving
+      note: >-
+        Very good health. Ordering more for the architectural verticality it
+        gives the pond.
+      photos:
+        - /assets/img/carex_25jul.jpg
     - date: 2026-07-06
       status: steady
       note: Adapting well.
@@ -227,6 +292,15 @@
   notes: Spreading perennial. Flowers June-Aug. Up to 15cm of water, height to 8cm.
   init_photo: /assets/img/jenny_init.jpg
   checks:
+    - date: 2026-07-25
+      status: steady
+      note: >-
+        Browning on the older trailing leaves, attributable to scorch — the
+        gold cultivar has less chlorophyll and so less capacity to dissipate
+        excess light. Probably sitting too deep; plan to raise it onto one of
+        the fountain ledges.
+      photos:
+        - /assets/img/jenny_25jul.jpg
     - date: 2026-07-19
       status: steady
       note: Algae building up on the leaves, so raised it out of the water a bit.
