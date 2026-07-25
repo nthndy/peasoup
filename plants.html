@@ -252,6 +252,18 @@ lede: Everything currently in the pond, with its status at the last health check
     resizeTimer = setTimeout(updatePreviewOverflow, 150);
   });
 
+  function openCarouselFromHash() {
+    var hash = window.location.hash;
+    if (!hash || hash.indexOf('#plant-') !== 0) { return; }
+    var article = document.querySelector(hash);
+    if (!article || !article.classList.contains('plant')) { return; }
+    var trigger = article.querySelector('.plant-trigger');
+    if (!trigger) { return; }
+    openCarousel(article, trigger);
+  }
+  openCarouselFromHash();
+  window.addEventListener('hashchange', openCarouselFromHash);
+
   prevBtn.addEventListener('click', showPrev);
   nextBtn.addEventListener('click', showNext);
 
