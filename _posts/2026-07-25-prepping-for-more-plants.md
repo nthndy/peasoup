@@ -118,4 +118,3 @@ So, to conclude, here is the list of plants I am going to add:
 
 - water starwort, *Callitriche* — struggling, and a poor bicarbonate user at this pH
 - willow moss, *Fontinalis antipyretica* — same problem
-- *Egeria* / *Elodea* — same problem, and non-native
