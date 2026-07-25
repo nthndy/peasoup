@@ -36,6 +36,7 @@ layout: default
         <span class="post-title">{{ post.title }}</span>
       </a>
       <p class="post-ex">{{ post.excerpt | strip_html | truncatewords: 26 }}</p>
+      <a class="post-read" href="{{ post.url | relative_url }}">Read <span aria-hidden="true">&rarr;</span></a>
     </li>
     {% endfor %}
   </ul>

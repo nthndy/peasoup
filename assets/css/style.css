@@ -191,6 +191,14 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .post-link:hover .post-title { color: var(--magenta); }
 .post-ex { margin: .3rem 0 0; color: var(--ink-soft); }
 .post-tags { font-family: var(--font-mono); font-size: .74rem; color: var(--mauve); margin: .3rem 0 0; }
+.post-read {
+  display: flex; justify-content: flex-end; align-items: center; gap: .3rem;
+  margin: .6rem 0 0; font-family: var(--font-mono); font-size: .82rem; font-weight: 600;
+  color: var(--green-deep); text-decoration: none;
+}
+.post-read span { display: inline-block; transition: transform .15s ease; }
+.post-read:hover { color: var(--magenta); }
+.post-read:hover span { transform: translateX(3px); }
 
 /* --- Post article ---------------------------------------------------------- */
 .post .dot-sep::before { content: "·"; margin: 0 .4rem; color: var(--grey); }
