@@ -115,16 +115,18 @@ lede: Everything currently in the pond, with its status at the last health check
   <div class="lightbox-backdrop" data-close></div>
   <div class="lightbox-dialog lightbox-dialog--plant" role="dialog" aria-modal="true" aria-labelledby="plant-lightbox-title">
     <button type="button" class="lightbox-close" data-close aria-label="Close">&times;</button>
-    <div class="carousel-header">
-      <h3 id="plant-lightbox-title"></h3>
-      <p class="latin" id="plant-lightbox-latin"></p>
+    <div class="carousel-scroll">
+      <div class="carousel-header">
+        <h3 id="plant-lightbox-title"></h3>
+        <p class="latin" id="plant-lightbox-latin"></p>
+      </div>
+      <div class="carousel-viewport">
+        <button type="button" class="carousel-nav carousel-nav--prev" data-carousel-prev aria-label="Previous photo">&#8249;</button>
+        <div class="carousel-track" id="plant-lightbox-track"></div>
+        <button type="button" class="carousel-nav carousel-nav--next" data-carousel-next aria-label="Next photo">&#8250;</button>
+      </div>
+      <div class="carousel-dots" id="plant-lightbox-dots"></div>
     </div>
-    <div class="carousel-viewport">
-      <button type="button" class="carousel-nav carousel-nav--prev" data-carousel-prev aria-label="Previous photo">&#8249;</button>
-      <div class="carousel-track" id="plant-lightbox-track"></div>
-      <button type="button" class="carousel-nav carousel-nav--next" data-carousel-next aria-label="Next photo">&#8250;</button>
-    </div>
-    <div class="carousel-dots" id="plant-lightbox-dots"></div>
   </div>
 </div>
 

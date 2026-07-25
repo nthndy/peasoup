@@ -266,6 +266,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .lightbox-dialog--plant {
   width: min(94vw, 640px); max-height: 90vh;
   background: #fff; border-radius: var(--radius); box-shadow: var(--shadow);
+  display: flex; flex-direction: column;
+}
+.carousel-scroll {
   padding: 1.5rem 1.5rem 1.25rem; overflow-y: auto;
   display: flex; flex-direction: column; gap: 1rem;
 }
