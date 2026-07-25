@@ -250,6 +250,11 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   flex: 0 0 auto; width: 56px; height: 56px; object-fit: cover;
   border-radius: 6px; border: 1px solid var(--line);
 }
+.plant-preview-init {
+  flex: 0 0 auto; display: block; line-height: 0;
+  position: relative; z-index: 2; border-radius: 6px;
+}
+.plant-preview-init:hover img { border-color: var(--green-deep); }
 .plant-preview-more {
   display: none; position: absolute; top: 0; right: 0; width: 28px; height: 56px;
   align-items: center; justify-content: flex-end; padding-right: .25rem;

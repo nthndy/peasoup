@@ -50,7 +50,7 @@ lede: Everything currently in the pond, with its status at the last health check
           <p class="latin">{{ p.latin }}</p>
           {% if p.notes %}<p class="plant-notes">{{ p.notes }}</p>{% endif %}
           <dl class="plant-meta">
-            <div><dt>Added</dt><dd>{{ p.added | date: "%b %Y" }}</dd></div>
+            <div><dt>Added</dt><dd>{{ p.added | date: "%-d %b %Y" }}</dd></div>
             <div><dt>Checked</dt><dd>{{ latest.date | date: "%-d %b %Y" }}</dd></div>
             <div><dt>Status</dt><dd class="cap">{{ latest.status }}</dd></div>
           </dl>
@@ -58,7 +58,19 @@ lede: Everything currently in the pond, with its status at the last health check
           <div class="plant-preview">
             <div class="plant-preview-track">
               {% if p.init_photo %}
+              {% assign added_date_str = p.added | date: "%Y-%m-%d" %}
+              {% assign planting_post_url = nil %}
+              {% for post in site.posts %}
+                {% assign post_date_str = post.date | date: "%Y-%m-%d" %}
+                {% if post_date_str == added_date_str %}{% assign planting_post_url = post.url %}{% endif %}
+              {% endfor %}
+              {% if planting_post_url %}
+              <a class="plant-preview-init" href="{{ planting_post_url | relative_url }}">
+                <img src="{{ p.init_photo | relative_url }}" alt="{{ p.name }} shortly after planting">
+              </a>
+              {% else %}
               <img src="{{ p.init_photo | relative_url }}" alt="{{ p.name }} shortly after planting">
+              {% endif %}
               {% endif %}
               {% assign checks_chronological = p.checks | reverse %}
               {% for c in checks_chronological %}
@@ -78,13 +90,6 @@ lede: Everything currently in the pond, with its status at the last health check
               <span class="plant-check-date">{{ c.date | date: "%-d %b %Y" }}</span>
               <span class="status status--{{ c.status }}"><span class="status-dot"></span><span class="cap">{{ c.status }}</span></span>
               {% if c.note %}<p class="plant-check-note">{{ c.note }}</p>{% endif %}
-              {% if c.photos %}
-              <div class="thumbs">
-                {% for photo in c.photos %}
-                <img src="{{ photo | relative_url }}" alt="{{ p.name }}, {{ c.date | date: "%-d %b %Y" }}">
-                {% endfor %}
-              </div>
-              {% endif %}
             </li>
             {% endfor %}
           </ol>
