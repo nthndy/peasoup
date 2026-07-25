@@ -413,6 +413,34 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 .is-got .wish-check { background: var(--green-deep); border-color: var(--green-deep); }
 .is-got .wish-name { text-decoration: line-through; color: var(--ink-soft); }
 
+/* --- Subscribe (follow.it) -------------------------------------------------- */
+.subscribe {
+  margin: 3rem 0; padding: 1.6rem 1.6rem 1.8rem; text-align: center;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.subscribe-heading { margin: 0 0 .3rem; font-size: 1.3rem; }
+.subscribe-lede { margin: 0 0 1.1rem; color: var(--ink-soft); font-size: .95rem; }
+.subscribe-form { display: flex; gap: .6rem; max-width: 420px; margin: 0 auto; }
+.subscribe-input {
+  flex: 1; min-width: 0; height: 2.6rem; padding: 0 .9rem;
+  border: 1px solid var(--line); border-radius: 8px;
+  font-family: var(--font-body); font-size: .95rem; color: var(--ink); background: var(--paper);
+}
+.subscribe-submit {
+  flex: 0 0 auto; height: 2.6rem; padding: 0 1.3rem; border: 0; border-radius: 8px;
+  background: var(--green-deep); color: #fff; font-weight: 600; font-size: .95rem; cursor: pointer;
+}
+.subscribe-submit:hover { background: var(--magenta); }
+.subscribe-powered {
+  display: block; margin-top: .9rem; font-size: .78rem; color: var(--ink-soft); text-decoration: none;
+}
+.subscribe-powered:hover { color: var(--magenta); }
+
+@media (max-width: 480px) {
+  .subscribe-form { flex-direction: column; }
+}
+
 /* --- Footer ---------------------------------------------------------------- */
 .footer {
   max-width: var(--maxw); margin: 2rem auto 0; padding: 2rem 1.25rem 3rem;
