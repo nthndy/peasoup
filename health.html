@@ -35,7 +35,7 @@ lede: Pond chemistry, tested by hand. Colour shows each value against its safe b
   </div>
   {% if latest.note %}<p class="water-note">{{ latest.note }}</p>{% endif %}
   {% if latest.photos %}
-  <div class="thumbs">
+  <div class="water-latest-photos">
     {% for photo in latest.photos %}
     <img src="{{ photo | relative_url }}" alt="Water test {{ latest.date | date: "%-d %b %Y" }}">
     {% endfor %}

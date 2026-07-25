@@ -167,6 +167,11 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   margin: 1.25rem 0 0; padding: .8rem 1rem; background: #fff;
   border: 1px solid var(--line); border-left: 3px solid var(--green-soft); border-radius: 6px;
 }
+.water-latest-photos { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.25rem 0 0; }
+.water-latest-photos img {
+  width: 100%; max-width: 320px; aspect-ratio: 4 / 3; object-fit: cover;
+  border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow);
+}
 .water-history { margin-top: 3rem; }
 .water-history h2 { font-size: 1.35rem; }
 .table-scroll { overflow-x: auto; }

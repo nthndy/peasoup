@@ -41,6 +41,8 @@ log:
       cleared to zero and ammonia falling as the cycle catches up; phosphate
       down to 1 ppm, the lowest yet, after a clear-out of decaying matter.
       pH still stuck at 9.
+    photos:
+      - /assets/img/testing_19jul.jpg
 
   - date: 2026-07-15
     ammonia: 2
@@ -60,6 +62,8 @@ log:
     note: >-
       Phosphate halved four days after planting. Ammonia and nitrite still at
       zero, nothing decomposing yet.
+    photos:
+      - /assets/img/testing_3.jpg
 
   - date: 2026-07-02
     ammonia: 0
@@ -67,6 +71,8 @@ log:
     phosphate: 10
     ph: 9
     note: Planting day, tested before the plants went in. Phosphate at the top of the chart.
+    photos:
+      - /assets/img/testing_2.jpg
 
   - date: 2026-06-30
     ammonia: 0
@@ -76,3 +82,5 @@ log:
     note: >-
       Baseline, before the refill. Readings taken indoors so the pH is the
       least certain of the four; somewhere between 8 and 9.
+    photos:
+      - /assets/img/testing_init.jpg
