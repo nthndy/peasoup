@@ -17,7 +17,8 @@ plants:
     latin: Nymphaea sp.
     priority: high
     cost: 10
-    got: false
+    note: 2 ordered 25 Jul 2026.
+    got: true
 
   - name: Floating heart
     latin: Nymphoides peltata
@@ -29,31 +30,36 @@ plants:
     latin: Mentha aquatica
     priority: high
     cost: 4.5
-    got: false
+    note: Ordered 25 Jul 2026.
+    got: true
 
   - name: Mare's tail
     latin: Hippuris vulgaris
     priority: medium
     cost: 5
-    got: false
+    note: 3 ordered 25 Jul 2026.
+    got: true
 
   - name: Flowering rush
-    latin: Butomus umbellatus
+    latin: Butomus umbellatus 'Alba'
     priority: medium
-    cost: 4.5
-    got: false
+    cost: 6
+    note: White-flowered cultivar. Ordered 25 Jul 2026.
+    got: true
 
   - name: Marsh marigold
     latin: Caltha palustris
     priority: medium
     cost: 5
-    got: false
+    note: Ordered 25 Jul 2026.
+    got: true
 
   - name: Water forget-me-not
     latin: Myosotis scorpioides
     priority: medium
     cost: 4.5
-    got: false
+    note: 2 ordered 25 Jul 2026.
+    got: true
 
   - name: Brooklime
     latin: Veronica beccabunga
@@ -107,7 +113,8 @@ plants:
     latin: Scirpus cernuus
     priority: medium
     cost: 5
-    got: false
+    note: 2 ordered 25 Jul 2026.
+    got: true
 
   - name: Sweet galingale
     latin: Cyperus longus
@@ -125,13 +132,21 @@ plants:
     latin: Juncus inflexus
     priority: medium
     cost: 4.5
-    got: false
+    note: Ordered 25 Jul 2026.
+    got: true
 
   - name: Pendulous sedge
     latin: Carex pendula
     priority: medium
     cost: 4.5
     got: false
+
+  - name: Water hawthorn
+    latin: Aponogeton distachyos
+    priority: medium
+    cost: 10
+    note: Ordered 25 Jul 2026.
+    got: true
 
   - name: Water violet
     latin: Hottonia palustris
@@ -154,7 +169,26 @@ plants:
   - name: Hornwort
     latin: Ceratophyllum demersum
     priority: low
-    cost: 5
+    cost: 45
+    note: Half bag, bulk reorder. Ordered 25 Jul 2026.
+    got: true
+
+  - name: Hair grass
+    latin: Eleocharis acicularis
+    priority: low
+    got: false
+
+  - name: Water spearmint
+    latin: Mentha cervina
+    priority: low
+    note: Less vigorous than the native water mint, and not native.
+    got: false
+
+  - name: Dwarf lily
+    latin: "Nymphaea 'Pygmaea Rubra' or 'Laydekeri Lilacea'"
+    priority: low
+    cost: 30
+    note: Right size for the ring, but £26–35 each.
     got: false
 
 materials:
