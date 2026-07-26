@@ -3,6 +3,8 @@ title: "Something's happening"
 date: 2026-07-06 18:45:00 +0100
 tags: [water, plants]
 excerpt: "Four days after planting and the phosphate has halved, from 10 ppm down to 5."
+banner: /assets/img/testing_3.jpg
+banner_alt: "Test kit vials against the colour chart"
 ---
 
 Well, I'd be lying if I said I hadn't been fastidiously checking in every day, but here's the first sign that something is actually happening. I tested the water again today and there's a definitive difference in the nutrient load, indicative that *biology is happening*. The phosphate has halved, going from 10 ppm at planting down to 5 ppm on day four.

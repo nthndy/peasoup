@@ -31,6 +31,11 @@ layout: default
   <ul class="post-list">
     {% for post in site.posts limit: 4 %}
     <li class="post-row">
+      {% if post.banner %}
+      <a class="post-banner" href="{{ post.url | relative_url }}">
+        <img src="{{ post.banner | relative_url }}" alt="{{ post.banner_alt | default: post.title }}" loading="lazy">
+      </a>
+      {% endif %}
       <a class="post-link" href="{{ post.url | relative_url }}">
         <span class="post-date">{{ post.date | date: "%-d %b %Y" }}</span>
         <span class="post-title">{{ post.title }}</span>

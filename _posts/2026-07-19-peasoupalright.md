@@ -3,6 +3,8 @@ title: "Pea soup"
 date: 2026-07-19 17:00:00 +0100
 tags: [water, plants, wildlife]
 excerpt: "Post-heatwave the algae has bloomed properly, but the water is reading its best yet. The pond looks its worst and reads its best."
+banner: /assets/img/all_peasoup_19jul.jpg
+banner_alt: "The fountain gone properly green"
 ---
 
 Quick update post-heatwave. We've got a veritable pea soup on our hands.

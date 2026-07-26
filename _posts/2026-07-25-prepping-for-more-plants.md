@@ -3,6 +3,8 @@ title: "Taking stock"
 date: 2026-07-25 17:00:00 +0100
 tags: [water, plants, wildlife, invertebrates]
 excerpt: "Time to buy buy buy (more plants) and shall I CCTV the wildlife?"
+banner: /assets/img/balcony_pond_25jul.jpg
+banner_alt: "The balcony pond, getting crowded"
 ---
 
 I'm taking stock of each plant individually today as I'm going to order another batch to try and fill the rest of the fountain. I'm also considering decanting some of the plants from my balcony pond as it's getting a bit crowded in there.

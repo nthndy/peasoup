@@ -3,6 +3,8 @@ title: "Critters galore"
 date: 2026-07-15 12:30:00 +0100
 tags: [water, plants, wildlife]
 excerpt: "A diverse cast of different ecological players appear, some good, some bad."
+banner: /assets/img/dragonfly_15jul.jpg
+banner_alt: "Dragonfly over the garden"
 ---
 
 So we have critters to report and a water update. Critters first then chemistry second.

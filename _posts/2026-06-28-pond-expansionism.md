@@ -3,6 +3,8 @@ title: "Grandiose plans of pond expansionism"
 date: 2026-06-28 17:00:00 +0100
 tags: [plants, build]
 excerpt: "If I can do it in a 42L bucket, why not a 3600L chlorine-bleached communal fountain?"
+banner: /assets/img/fountain_chlorine.jpg
+banner_alt: "Communal fountain with chlorine tablet stains"
 ---
 
 I can do it in a 42L bucket, so why not a 3600L chlorine-bleached communal fountain? It can't possibly be that difficult riiiighhttt?

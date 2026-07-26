@@ -3,6 +3,8 @@ title: "Planting out"
 date: 2026-07-02 19:30:00 +0100
 tags: [plants, build]
 excerpt: "Twelve plants went in today, all from Wetland Plants: five oxygenators, two floating, two deep-water and three marginals."
+banner: /assets/img/testing_2.jpg
+banner_alt: "Test kit vials against the colour chart"
 ---
 
 With the fountain scrubbed, refilled and dechlorinated, and the Legionnaires' test back negative, it was time for the fun part: plants. But first, one more look at the water.
