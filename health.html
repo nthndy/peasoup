@@ -136,9 +136,9 @@ lede: Pond chemistry, tested by hand. Colour shows each value against its safe b
       <svg class="chart-svg" viewBox="0 0 {{ vw }} {{ ch }}" role="img" aria-label="{{ label }} over time{{ unit_suffix }}">
         <rect class="chart-band--{{ v }}" x="{{ left }}" y="{{ band_y }}" width="{{ plotw }}" height="{{ band_h }}" fill-opacity="0.16"></rect>
         {%- assign band_mid = band_y | plus: band_y2 | divided_by: 2.0 | round: 2 -%}
-        {%- assign band_mid2 = band_mid | plus: 26 -%}
+        {%- assign band_mid2 = band_mid | plus: 32 -%}
         {%- if band_mid2 > base -%}
-          {%- assign band_mid2 = band_mid | minus: 26 -%}
+          {%- assign band_mid2 = band_mid | minus: 32 -%}
         {%- endif -%}
         <text class="chart-safe-label chart-band--{{ v }}" x="14" y="{{ band_mid }}" text-anchor="middle" transform="rotate(-90 14 {{ band_mid }})">safe</text>
         <text class="chart-safe-label chart-band--{{ v }}" x="14" y="{{ band_mid2 }}" text-anchor="middle" transform="rotate(-90 14 {{ band_mid2 }})">zone</text>
