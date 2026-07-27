@@ -141,8 +141,14 @@ lede: Pond chemistry, tested by hand. Colour shows each value against its safe b
         <text class="chart-safe-label" x="{{ left | plus: 6 }}" y="{{ band_y | plus: 11 }}">safe</text>
         <line class="chart-axis-line" x1="{{ left }}" y1="{{ top }}" x2="{{ left }}" y2="{{ base }}"></line>
         <line class="chart-axis-line" x1="{{ left }}" y1="{{ base }}" x2="{{ right_edge }}" y2="{{ base }}"></line>
-        <text x="{{ left | minus: 6 }}" y="{{ top | plus: 4 }}" text-anchor="end">{{ vmax }}</text>
-        <text x="{{ left | minus: 6 }}" y="{{ base }}" text-anchor="end">{{ vmin }}</text>
+        {%- assign n_ticks_m1 = vmax | minus: vmin | divided_by: t.step -%}
+        {%- for i in (0..n_ticks_m1) -%}
+          {%- assign tick_val = i | times: t.step | plus: vmin -%}
+          {%- assign tick_vf = tick_val | minus: vmin | times: 1.0 | divided_by: vspan -%}
+          {%- assign tick_y = 1 | minus: tick_vf | times: plotph | plus: top | round: 2 -%}
+          <line class="chart-axis-line" x1="{{ left | minus: 4 }}" y1="{{ tick_y }}" x2="{{ left }}" y2="{{ tick_y }}"></line>
+          <text x="{{ left | minus: 7 }}" y="{{ tick_y | plus: 3 }}" text-anchor="end">{{ tick_val }}</text>
+        {%- endfor -%}
         <polyline class="chart-line series--{{ v }}" points="{{ pts }}"></polyline>
         {%- for r in log_asc -%}
           {%- assign i = forloop.index0 -%}

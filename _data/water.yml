@@ -5,6 +5,8 @@
 #   inside safe band                -> good   (green)
 #   inside warn band, outside safe  -> watch  (mauve)
 #   outside warn band               -> act    (magenta)
+# `step` sets the spacing between y-axis tick marks on the chart; range
+# must divide evenly by it so ticks land exactly on range[0] and range[1].
 #
 # `log` is newest-first. Add a new block at the TOP each time you test.
 # Units: ammonia / nitrite / phosphate in ppm, pH unitless.
@@ -12,10 +14,10 @@
 # /assets/img/ — omit the key entirely when there aren't any.
 
 targets:
-  ammonia:   { unit: "ppm", safe: [0, 0.25],  warn: [0, 1.0], range: [0, 8] }
-  nitrite:   { unit: "ppm", safe: [0, 0.25],  warn: [0, 1.0], range: [0, 5] }
-  phosphate: { unit: "ppm", safe: [0, 1.0],   warn: [0, 5.0], range: [0, 10] }
-  ph:        { unit: "",    safe: [6.5, 8.5], warn: [6.0, 9.0], range: [5, 9] }
+  ammonia:   { unit: "ppm", safe: [0, 0.25],  warn: [0, 1.0], range: [0, 8],  step: 2 }
+  nitrite:   { unit: "ppm", safe: [0, 0.25],  warn: [0, 1.0], range: [0, 5],  step: 1 }
+  phosphate: { unit: "ppm", safe: [0, 1.0],   warn: [0, 5.0], range: [0, 10], step: 2 }
+  ph:        { unit: "",    safe: [6.5, 8.5], warn: [6.0, 9.0], range: [5, 9], step: 1 }
 
 log:
   - date: 2026-07-25
