@@ -33,6 +33,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - .github/
+  - .claude/
 
 # Default front matter so new posts need almost none.
 defaults:

@@ -174,11 +174,22 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   margin: 1.25rem 0 0; padding: .8rem 1rem; background: #fff;
   border: 1px solid var(--line); border-left: 3px solid var(--green-soft); border-radius: 6px;
 }
-.water-latest-photos { display: flex; flex-wrap: wrap; gap: .75rem; margin: 1.25rem 0 0; }
-.water-latest-photos img {
-  width: 100%; max-width: 320px; aspect-ratio: 4 / 3; object-fit: cover;
+.water-carousel { margin-top: 2rem; }
+.water-carousel-track {
+  display: flex; gap: .75rem; overflow-x: auto; margin-top: .9rem; padding-bottom: .5rem;
+}
+.water-carousel-item {
+  flex: 0 0 auto; display: block; width: 170px; text-decoration: none; color: var(--ink);
+}
+.water-carousel-item img {
+  width: 170px; height: 128px; object-fit: cover;
   border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow);
 }
+.water-carousel-item:hover img { border-color: var(--green-deep); }
+.water-carousel-date {
+  display: block; margin-top: .35rem; font-family: var(--font-mono); font-size: .72rem; color: var(--ink-soft);
+}
+.water-charts { margin-top: 2.25rem; }
 .water-history { margin-top: 3rem; }
 .water-history h2 { font-size: 1.35rem; }
 .table-scroll { overflow-x: auto; }
@@ -441,10 +452,17 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
 
 /* --- Subscribe (follow.it) -------------------------------------------------- */
 .subscribe {
-  margin: 3rem 0; padding: 1.6rem 1.6rem 1.8rem; text-align: center;
+  position: relative; margin: 3rem 0; padding: 1.6rem 1.6rem 1.8rem; text-align: center;
   background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
   box-shadow: var(--shadow);
 }
+.subscribe-close {
+  position: absolute; top: .6rem; right: .6rem; width: 1.75rem; height: 1.75rem;
+  display: flex; align-items: center; justify-content: center;
+  border: 0; border-radius: 50%; background: transparent; color: var(--ink-soft);
+  font-size: 1.3rem; line-height: 1; cursor: pointer;
+}
+.subscribe-close:hover { background: var(--line); color: var(--ink); }
 .subscribe-heading { margin: 0 0 .3rem; font-size: 1.3rem; }
 .subscribe-lede { margin: 0 0 1.1rem; color: var(--ink-soft); font-size: .95rem; }
 .subscribe-form { display: flex; gap: .6rem; max-width: 420px; margin: 0 auto; }

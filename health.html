@@ -34,13 +34,38 @@ lede: Pond chemistry, tested by hand. Colour shows each value against its safe b
     </div>
   </div>
   {% if latest.note %}<p class="water-note">{{ latest.note }}</p>{% endif %}
-  {% if latest.photos %}
-  <div class="water-latest-photos">
-    {% for photo in latest.photos %}
-    <img src="{{ photo | relative_url }}" alt="Water test {{ latest.date | date: "%-d %b %Y" }}">
+</section>
+
+<section class="water-carousel">
+  <div class="section-head">
+    <h2>Test photos over time</h2>
+    <span class="muted">latest left, oldest right</span>
+  </div>
+  <div class="water-carousel-track">
+    {% for r in site.data.water.log %}
+      {% if r.photos %}
+        {% assign r_date_str = r.date | date: "%Y-%m-%d" %}
+        {% assign post_url = nil %}
+        {% for post in site.posts %}
+          {% assign p_date_str = post.date | date: "%Y-%m-%d" %}
+          {% if p_date_str == r_date_str %}{% assign post_url = post.url %}{% endif %}
+        {% endfor %}
+        {% for photo in r.photos %}
+        {% if post_url %}
+        <a class="water-carousel-item" href="{{ post_url | relative_url }}">
+          <img src="{{ photo | relative_url }}" alt="Water test {{ r.date | date: "%-d %b %Y" }}">
+          <span class="water-carousel-date">{{ r.date | date: "%-d %b %Y" }}</span>
+        </a>
+        {% else %}
+        <div class="water-carousel-item">
+          <img src="{{ photo | relative_url }}" alt="Water test {{ r.date | date: "%-d %b %Y" }}">
+          <span class="water-carousel-date">{{ r.date | date: "%-d %b %Y" }}</span>
+        </div>
+        {% endif %}
+        {% endfor %}
+      {% endif %}
     {% endfor %}
   </div>
-  {% endif %}
 </section>
 
 {%- comment -%}
