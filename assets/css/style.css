@@ -66,6 +66,13 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.
   padding: 2.5rem 1.25rem 4rem;
 }
 
+/* --- Site banner (trial) ----------------------------------------------------- */
+.site-banner { width: 100%; overflow: hidden; line-height: 0; }
+.site-banner img {
+  display: block; width: 100%; height: clamp(50px, 8vw, 110px);
+  object-fit: cover; object-position: 100% 52%;
+}
+
 /* --- Masthead -------------------------------------------------------------- */
 .masthead {
   max-width: var(--maxw);
