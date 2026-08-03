@@ -70,6 +70,15 @@
   notes: Native. Weighted bunch, placed just below the water line until established. Planting depth 15-45cm.
   init_photo: /assets/img/callitriche_init.jpg
   checks:
+    - date: 2026-07-28
+      status: steady
+      note: >-
+        Pot knocked over during the clear-out and the anchored tuft lost, but
+        loose strands are turning up floating happily across the main pond —
+        looks to have gone fully free-floating rather than died back.
+      photos:
+        - /assets/img/call_pot_28jul.jpg
+        - /assets/img/call_28jul.jpg
     - date: 2026-07-19
       status: struggling
       note: >-
@@ -90,6 +99,14 @@
   notes: British native. Aquatic to 30cm or as a marginal. Label warns it can be invasive.
   init_photo: /assets/img/mares_init.jpg
   checks:
+    - date: 2026-07-28
+      status: thriving
+      note: >-
+        Broken straight through the plastic basket, shooting for the surface —
+        still the strongest performer in the pond. Bulked up with three more
+        plants added alongside the original clump.
+      photos:
+        - /assets/img/mares_tail_28jul.jpg
     - date: 2026-07-25
       status: thriving
       note: >-
@@ -114,6 +131,13 @@
   notes: Cotton bud grass. Up to 10cm of water. Acts as an oxygenator. Height 25-30cm, spread 50cm.
   init_photo: /assets/img/fibreoptic_init.jpg
   checks:
+    - date: 2026-07-28
+      status: steady
+      note: >-
+        Holding up fine through the clear-out and re-planting. Topped up with
+        two more plants added alongside the originals.
+      photos:
+        - /assets/img/fibre_28jul.jpg
     - date: 2026-07-25
       status: thriving
       note: One of the strongest performers. Ordering more in the next batch.
@@ -153,6 +177,13 @@
   notes: Native. 30-60cm of water above soil, full sun to partial shade. Flowers June-Aug.
   init_photo: /assets/img/nymphoides_init.jpg
   checks:
+    - date: 2026-07-28
+      status: thriving
+      note: >-
+        Older leaf die-back looks to be natural turnover for this species
+        rather than decline — still pushing new shoots and spreading laterally.
+      photos:
+        - /assets/img/peltata_28jul.jpg
     - date: 2026-07-25
       status: thriving
       note: >-
@@ -177,6 +208,14 @@
   notes: Rhizome planted at 45 degrees, weighted with pea gravel, full sun.
   init_photo: /assets/img/alba_lily_init.jpg
   checks:
+    - date: 2026-07-28
+      status: thriving
+      note: >-
+        Suffered the most visibly from being out of water during the
+        clear-out — leaves curled within under an hour — but otherwise still
+        the strongest grower in the pond.
+      photos:
+        - /assets/img/lily_28jul.jpg
     - date: 2026-07-25
       status: steady
       note: >-
@@ -198,6 +237,36 @@
       status: planted
       note: Planted out.
 
+- name: Unnamed water lily          # TODO: cultivar names unknown, arrived unlabelled
+  latin: Nymphaea sp.
+  zone: deep-water
+  added: 2026-07-28
+  notes: >-
+    Four rhizomes, all unlabelled/unknown cultivar, planted at 45 degrees and
+    weighted with pea gravel alongside the existing Alba lily.
+  init_photo: /assets/img/lily_bud_28jul.jpg
+  checks:
+    - date: 2026-07-28
+      status: planted
+      note: >-
+        Four unnamed water lilies planted out. One arrived with a flower bud
+        already forming; also came with a hitchhiking snail on one of the
+        root bundles.
+      photos:
+        - /assets/img/rhizome_28jul.jpg
+        - /assets/img/snail_28jul.jpg
+        - /assets/img/parcel_28jul.jpg
+
+- name: Water hawthorn
+  latin: Aponogeton distachyos
+  zone: deep-water
+  added: 2026-07-28
+  notes: Cape pondweed. Strap-like floating leaves, fragrant white flowers. Prefers cooler water.
+  checks:
+    - date: 2026-07-28
+      status: planted
+      note: One planted out.
+
 - name: Willow grass
   latin: Persicaria amphibia
   zone: deep-water
@@ -205,6 +274,11 @@
   notes: Water knotweed. Native. Better in deep water but tolerates damp. Flowers July-Sept, planting depth 15-90cm.
   init_photo: /assets/img/knotweed_init.jpg
   checks:
+    - date: 2026-07-28
+      status: steady
+      note: Doing fine through the clear-out and re-planting.
+      photos:
+        - /assets/img/knotweed_28jul.jpg
     - date: 2026-07-25
       status: thriving
       note: Looking good. Candidate for the next batch of plants.
@@ -224,6 +298,13 @@
   notes: Height 90cm, spread 45cm. Full sun, hardy. Planting depth 5-45cm above soil.
   init_photo: /assets/img/flowering_rush_init.jpg
   checks:
+    - date: 2026-07-28
+      status: thriving
+      note: >-
+        Root system bursting out of its basket — the most vigorous grower of
+        the marginals by some margin.
+      photos:
+        - /assets/img/rush_28jul.jpg
     - date: 2026-07-25
       status: steady
       note: >-
@@ -239,6 +320,46 @@
       status: planted
       note: Planted out.
 
+- name: White flowering rush        # TODO: confirm whether this is a genuine white-flowered form/cultivar or a different species — flagged distinct from the pink-flowered Flowering rush above
+  latin: Butomus umbellatus
+  zone: marginal
+  added: 2026-07-28
+  notes: White-flowered form, kept as a separate entry from the existing (pink-flowered) Flowering rush.
+  checks:
+    - date: 2026-07-28
+      status: planted
+      note: One planted out.
+
+- name: Hard rush
+  latin: Juncus inflexus
+  zone: marginal
+  added: 2026-07-28
+  notes: Native. Stiff, grey-green, upright stems. Tolerates a range of water depths.
+  checks:
+    - date: 2026-07-28
+      status: planted
+      note: One planted out.
+
+- name: Water mint
+  latin: Mentha aquatica
+  zone: marginal
+  added: 2026-07-28
+  notes: Native. Shallow margins, tolerates damp soil to a few cm of water. Aromatic.
+  checks:
+    - date: 2026-07-28
+      status: planted
+      note: One planted out.
+
+- name: Water forget-me-not
+  latin: Myosotis scorpioides
+  zone: marginal
+  added: 2026-07-28
+  notes: Native. Shallow margins, small blue flowers May-Sept.
+  checks:
+    - date: 2026-07-28
+      status: planted
+      note: Two planted out.
+
 - name: Brooklime
   latin: Veronica beccabunga
   zone: marginal
@@ -246,6 +367,9 @@
   notes: Native shallow water plant. 0-10cm above soil. Flowers May-Aug.
   init_photo: /assets/img/beccabunga_init.jpg
   checks:
+    - date: 2026-07-28
+      status: struggling
+      note: Teetering on the edge of something, unclear whether it'll pull through.
     - date: 2026-07-25
       status: steady
       note: >-
@@ -271,6 +395,11 @@
   notes: Native shallow water plant. Up to 15cm above soil. Height to 123cm, flowers June-Aug, shade tolerant.
   init_photo: /assets/img/carex_init.jpg
   checks:
+    - date: 2026-07-28
+      status: steady
+      note: Doing fine through the clear-out and re-planting.
+      photos:
+        - /assets/img/carex_28jul.jpg
     - date: 2026-07-25
       status: thriving
       note: >-
@@ -292,6 +421,14 @@
   notes: Spreading perennial. Flowers June-Aug. Up to 15cm of water, height to 8cm.
   init_photo: /assets/img/jenny_init.jpg
   checks:
+    - date: 2026-07-28
+      status: struggling
+      note: >-
+        Biofilm building up aggressively again despite already being raised
+        out of the water; moved up onto the fountain's upper tier for more
+        clearance.
+      photos:
+        - /assets/img/jen_28jul.jpg
     - date: 2026-07-25
       status: steady
       note: >-
@@ -310,3 +447,13 @@
     - date: 2026-07-02
       status: planted
       note: Planted out.
+
+- name: Marsh marigold
+  latin: Caltha palustris
+  zone: bog
+  added: 2026-07-28
+  notes: Native. Kingcup. Boggy margins to shallow water, flowers Mar-Jun (early — this planting is out of season).
+  checks:
+    - date: 2026-07-28
+      status: planted
+      note: One planted out.
