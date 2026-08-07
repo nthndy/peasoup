@@ -1,26 +1,3 @@
-# Plant inventory. Add an entry per plant. Duplicate a block to add a new one.
-#
-# Each plant carries its history as `checks`, a list of dated health checks,
-# newest-first. The first entry in `checks` is the plant's current state —
-# there is no separate top-level status/checked field any more.
-#
-# checks[].status: one of  planted | thriving | steady | struggling | lost
-#   planted    = mauve,       just went in, no verdict yet
-#   thriving   = green,        growing well
-#   steady     = light green, holding, no change
-#   struggling = magenta,      needs attention
-#   lost       = grey,         died / removed (kept for the record)
-#
-# checks[].note: optional.
-# checks[].photos: optional list of paths under /assets/img/. Most checks
-#   won't have any — omit the key entirely rather than leaving it blank.
-#
-# zone: marginal | oxygenator | floating | deep-water | bog
-# added: date the plant went in (YYYY-MM-DD)
-# init_photo: optional path under /assets/img/ to that plant's initial
-#   planting photo, shown as a popover when its card is clicked. Omit
-#   entirely if there's no matching photo — don't leave it blank.
-
 - name: Hornwort
   latin: Ceratophyllum demersum
   zone: oxygenator
@@ -70,6 +47,12 @@
   notes: Native. Weighted bunch, placed just below the water line until established. Planting depth 15-45cm.
   init_photo: /assets/img/callitriche_init.jpg
   checks:
+    - date: 2026-08-07
+      status: thriving
+      note: >-
+        Thriving as I can't stop pulling tiny little green shoots from the water column when attempting to clear excess organic detritus.
+      photos:
+        - /assets/img/starwort_07aug.jpg
     - date: 2026-07-28
       status: steady
       note: >-
@@ -99,6 +82,12 @@
   notes: British native. Aquatic to 30cm or as a marginal. Label warns it can be invasive.
   init_photo: /assets/img/mares_init.jpg
   checks:
+    - date: 2026-08-07
+      status: struggling
+      note: >-
+        Moved to the first shelf of the central fountain feature to test running water, but looks to be struggling there and might prefer being fully submerged.
+      photos:
+        - /assets/img/everything_07aug.jpg
     - date: 2026-07-28
       status: thriving
       note: >-
@@ -177,6 +166,12 @@
   notes: Native. 30-60cm of water above soil, full sun to partial shade. Flowers June-Aug.
   init_photo: /assets/img/nymphoides_init.jpg
   checks:
+    - date: 2026-08-07
+      status: steady
+      note: >-
+        Placed an unanchored strand or two on the first shelf of the fountain feature to test how it adapts to running water.
+      photos:
+        - /assets/img/everything_07aug.jpg
     - date: 2026-07-28
       status: thriving
       note: >-
@@ -246,6 +241,13 @@
     weighted with pea gravel alongside the existing Alba lily.
   init_photo: /assets/img/lily_bud_28jul.jpg
   checks:
+    - date: 2026-08-07
+      status: thriving
+      note: >-
+        Still adapting with new shoots climbing up and unfurling pads while older, larger pads die back. Highlight of the venture: a pink flower successfully bloomed (though it came in bud). Note minor aphid presence managed by brushing into water.
+      photos:
+        - /assets/img/flower_28jul.jpg
+        - /assets/img/aphid_07jul.jpg
     - date: 2026-07-28
       status: planted
       note: >-
@@ -346,6 +348,12 @@
   added: 2026-07-28
   notes: Native. Shallow margins, tolerates damp soil to a few cm of water. Aromatic.
   checks:
+    - date: 2026-08-07
+      status: thriving
+      note: >-
+        Moved up to the first shelf of the central fountain feature to benefit from running water; clearly thriving in this position.
+      photos:
+        - /assets/img/everything_07aug.jpg
     - date: 2026-07-28
       status: planted
       note: One planted out.
@@ -356,6 +364,12 @@
   added: 2026-07-28
   notes: Native. Shallow margins, small blue flowers May-Sept.
   checks:
+    - date: 2026-08-07
+      status: thriving
+      note: >-
+        Moved up to the first shelf of the central fountain feature to benefit from running water; clearly thriving in this position.
+      photos:
+        - /assets/img/everything_07aug.jpg
     - date: 2026-07-28
       status: planted
       note: Two planted out.
@@ -367,6 +381,12 @@
   notes: Native shallow water plant. 0-10cm above soil. Flowers May-Aug.
   init_photo: /assets/img/beccabunga_init.jpg
   checks:
+    - date: 2026-08-07
+      status: steady
+      note: >-
+        Moved up to the first shelf of the fountain feature for running water; doing a bit better and showing signs of improvement.
+      photos:
+        - /assets/img/everything_07aug.jpg
     - date: 2026-07-28
       status: struggling
       note: Teetering on the edge of something, unclear whether it'll pull through.
@@ -421,6 +441,12 @@
   notes: Spreading perennial. Flowers June-Aug. Up to 15cm of water, height to 8cm.
   init_photo: /assets/img/jenny_init.jpg
   checks:
+    - date: 2026-08-07
+      status: steady
+      note: >-
+        Moved up to the upper tier of the fountain feature; doing a bit better with the added clearance from the biofilm.
+      photos:
+        - /assets/img/everything_07aug.jpg
     - date: 2026-07-28
       status: struggling
       note: >-

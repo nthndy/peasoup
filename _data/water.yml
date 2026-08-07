@@ -20,6 +20,33 @@ targets:
   ph:        { unit: "",    safe: [6.5, 8.5], warn: [6.0, 9.0], range: [5, 9], step: 1 }
 
 log:
+  - date: 2026-08-07
+    ammonia: 0
+    nitrite: 0
+    phosphate: 5
+    ph: 8
+    note: >-
+      pH started to climb again, rebounding to 8 a day after the major water
+      change, likely as alkali continues to leach back into the system. 
+      Nitrite processed quickly back down to 0 ppm. Phosphate remains steady at 5 ppm.
+    photos:
+      - /assets/img/water_07aug.jpg
+
+  - date: 2026-08-06
+    ammonia: 0
+    nitrite: 0.5
+    phosphate: 5
+    ph: 7
+    note: >-
+      Major manual water change, replacing over half a tonne of water by hand. 
+      This caused a distinct drop in pH down to 7 (confirmed with full-range litmus 
+      paper alongside a lemon juice sanity check) and a notable climb in phosphate 
+      back to 5 ppm due to the orthophosphates added to fresh London tap water. 
+      Nitrite saw a temporary spike to 0.5 ppm.
+    photos:
+      - /assets/img/water_06aug.jpg
+      - /assets/img/ph_06aug.jpg
+
   - date: 2026-07-28
     ammonia: 0
     nitrite: 0
