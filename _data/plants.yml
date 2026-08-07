@@ -260,10 +260,13 @@
   zone: deep-water
   added: 2026-07-28
   notes: Cape pondweed. Strap-like floating leaves, fragrant white flowers. Prefers cooler water.
+  init_photo: /assets/img/hawthorn_28jul.jpg
   checks:
     - date: 2026-07-28
       status: planted
       note: One planted out.
+      photos:
+        - /assets/img/hawthorn_28jul.jpg
 
 - name: Willow grass
   latin: Persicaria amphibia
@@ -323,26 +326,33 @@
   zone: marginal
   added: 2026-07-28
   notes: White-flowered form, kept as a separate entry from the existing (pink-flowered) Flowering rush.
+  init_photo: /assets/img/white_rush_28jul.jpg
   checks:
     - date: 2026-07-28
       status: planted
       note: One planted out.
+      photos:
+        - /assets/img/white_rush_28jul.jpg
 
 - name: Hard rush
   latin: Juncus inflexus
   zone: marginal
   added: 2026-07-28
   notes: Native. Stiff, grey-green, upright stems. Tolerates a range of water depths.
+  init_photo: /assets/img/hard_rush_28jul.jpg
   checks:
     - date: 2026-07-28
       status: planted
       note: One planted out.
+      photos:
+        - /assets/img/hard_rush_28jul.jpg
 
 - name: Water mint
   latin: Mentha aquatica
   zone: marginal
   added: 2026-07-28
   notes: Native. Shallow margins, tolerates damp soil to a few cm of water. Aromatic.
+  init_photo: /assets/img/mint_28jul.jpg
   checks:
     - date: 2026-08-07
       status: thriving
@@ -351,19 +361,22 @@
     - date: 2026-07-28
       status: planted
       note: One planted out.
+      photos:
+        - /assets/img/mint_28jul.jpg
 
 - name: Water forget-me-not
   latin: Myosotis scorpioides
   zone: marginal
   added: 2026-07-28
   notes: Native. Shallow margins, small blue flowers May-Sept.
+  init_photo: /assets/img/forgetmenot_28jul.jpg
   checks:
     - date: 2026-08-07
       status: thriving
       note: >-
         Moved up to the first shelf of the central fountain feature to benefit from running water; clearly thriving in this position.
       photos:
-        - /assets/img/forgetmenot.jpg
+        - /assets/img/forgetmenot_28jul.jpg
     - date: 2026-07-28
       status: planted
       note: Two planted out.
@@ -469,7 +482,10 @@
   zone: bog
   added: 2026-07-28
   notes: Native. Kingcup. Boggy margins to shallow water, flowers Mar-Jun (early — this planting is out of season).
+  init_photo: /assets/img/marigold_28jul.jpg
   checks:
     - date: 2026-07-28
       status: planted
       note: One planted out.
+      photos:
+        - /assets/img/marigold_28jul.jpg
