@@ -265,8 +265,6 @@
     - date: 2026-07-28
       status: planted
       note: One planted out.
-      photos:
-        - /assets/img/hawthorn_28jul.jpg
 
 - name: Willow grass
   latin: Persicaria amphibia
@@ -331,8 +329,6 @@
     - date: 2026-07-28
       status: planted
       note: One planted out.
-      photos:
-        - /assets/img/white_rush_28jul.jpg
 
 - name: Hard rush
   latin: Juncus inflexus
@@ -344,8 +340,6 @@
     - date: 2026-07-28
       status: planted
       note: One planted out.
-      photos:
-        - /assets/img/hard_rush_28jul.jpg
 
 - name: Water mint
   latin: Mentha aquatica
@@ -361,8 +355,6 @@
     - date: 2026-07-28
       status: planted
       note: One planted out.
-      photos:
-        - /assets/img/mint_28jul.jpg
 
 - name: Water forget-me-not
   latin: Myosotis scorpioides
@@ -375,8 +367,6 @@
       status: thriving
       note: >-
         Moved up to the first shelf of the central fountain feature to benefit from running water; clearly thriving in this position.
-      photos:
-        - /assets/img/forgetmenot_28jul.jpg
     - date: 2026-07-28
       status: planted
       note: Two planted out.
@@ -487,5 +477,3 @@
     - date: 2026-07-28
       status: planted
       note: One planted out.
-      photos:
-        - /assets/img/marigold_28jul.jpg
