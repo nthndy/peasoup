@@ -86,8 +86,6 @@
       status: struggling
       note: >-
         Moved to the first shelf of the central fountain feature to test running water, but looks to be struggling there and might prefer being fully submerged.
-      photos:
-        - /assets/img/everything_07aug.jpg
     - date: 2026-07-28
       status: thriving
       note: >-
@@ -170,8 +168,6 @@
       status: steady
       note: >-
         Placed an unanchored strand or two on the first shelf of the fountain feature to test how it adapts to running water.
-      photos:
-        - /assets/img/everything_07aug.jpg
     - date: 2026-07-28
       status: thriving
       note: >-
@@ -247,7 +243,7 @@
         Still adapting with new shoots climbing up and unfurling pads while older, larger pads die back. Highlight of the venture: a pink flower successfully bloomed (though it came in bud). Note minor aphid presence managed by brushing into water.
       photos:
         - /assets/img/flower_28jul.jpg
-        - /assets/img/aphid_07jul.jpg
+        - /assets/img/aphid_07aug.jpg
     - date: 2026-07-28
       status: planted
       note: >-
@@ -366,6 +362,8 @@
       status: thriving
       note: >-
         Moved up to the first shelf of the central fountain feature to benefit from running water; clearly thriving in this position.
+      photos:
+        - /assets/img/forgetmenot.jpg
     - date: 2026-07-28
       status: planted
       note: Two planted out.
@@ -381,8 +379,6 @@
       status: steady
       note: >-
         Moved up to the first shelf of the fountain feature for running water; doing a bit better and showing signs of improvement.
-      photos:
-        - /assets/img/everything_07aug.jpg
     - date: 2026-07-28
       status: struggling
       note: Teetering on the edge of something, unclear whether it'll pull through.
@@ -441,8 +437,6 @@
       status: steady
       note: >-
         Moved up to the upper tier of the fountain feature; doing a bit better with the added clearance from the biofilm.
-      photos:
-        - /assets/img/everything_07aug.jpg
     - date: 2026-07-28
       status: struggling
       note: >-
@@ -465,7 +459,7 @@
       note: Algae building up on the leaves, so raised it out of the water a bit.
     - date: 2026-07-06
       status: steady
-      note: Adapting well.
+      note: Word of caution: adapting well.
     - date: 2026-07-02
       status: planted
       note: Planted out.
