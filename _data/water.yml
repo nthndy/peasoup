@@ -20,6 +20,16 @@ targets:
   ph:        { unit: "",    safe: [6.5, 8.5], warn: [6.0, 9.0], range: [5, 9], step: 1 }
 
 log:
+  - date: 2026-08-16
+    ammonia: 0
+    nitrite: 0
+    phosphate: 7.5
+    ph: 9
+    note: >-
+      Ammonia and nitrite remain steady at 0 ppm. pH is back up to 9, and phosphate is sitting somewhere between 5-10 ppm despite the heatwave.
+    photos:
+      - /assets/img/water_16aug.jpg
+
   - date: 2026-08-07
     ammonia: 0
     nitrite: 0

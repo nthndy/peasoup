@@ -82,6 +82,10 @@
   notes: British native. Aquatic to 30cm or as a marginal. Label warns it can be invasive.
   init_photo: /assets/img/mares_init.jpg
   checks:
+    - date: 2026-08-16
+      status: steady
+      note: >-
+        Three new plants have gone in and are doing well to establish themselves just out of shot, despite the heatwave.
     - date: 2026-08-07
       status: struggling
       note: >-
@@ -118,6 +122,10 @@
   notes: Cotton bud grass. Up to 10cm of water. Acts as an oxygenator. Height 25-30cm, spread 50cm.
   init_photo: /assets/img/fibreoptic_init.jpg
   checks:
+    - date: 2026-08-16
+      status: steady
+      note: >-
+        The new plants are doing well to establish themselves out of shot.
     - date: 2026-07-28
       status: steady
       note: >-
@@ -164,6 +172,10 @@
   notes: Native. 30-60cm of water above soil, full sun to partial shade. Flowers June-Aug.
   init_photo: /assets/img/nymphoides_init.jpg
   checks:
+    - date: 2026-08-16
+      status: struggling
+      note: >-
+        Appears to be struggling up on the upper shelf of the fountain during the heatwave.
     - date: 2026-08-07
       status: steady
       note: >-
@@ -191,6 +203,20 @@
     - date: 2026-07-02
       status: planted
       note: Planted out.
+
+- name: Common duckweed
+  latin: Lemna minor
+  zone: floating
+  added: 2026-08-13
+  notes: Inoculated from the balcony pond in an attempt to mitigate water evaporation during the summer heatwaves.
+  init_photo: /assets/img/duckweed_16aug.jpg
+  checks:
+    - date: 2026-08-16
+      status: steady
+      note: >-
+        Tiny fronds seem to be taking and establishing well after a couple of days in the water.
+      photos:
+        - /assets/img/duckweed_16aug.jpg
 
 - name: Alba lily
   latin: Nymphaea alba
@@ -262,6 +288,12 @@
   notes: Cape pondweed. Strap-like floating leaves, fragrant white flowers. Prefers cooler water.
   init_photo: /assets/img/hawthorn_28jul.jpg
   checks:
+    - date: 2026-08-16
+      status: thriving
+      note: >-
+        Definitely thriving. Already started blooming a couple of days back, with the first intrepid flower joined by a copilot standing strong above the water with peculiar orchid-like buds.
+      photos:
+        - /assets/img/hawthorn_16aug.jpg
     - date: 2026-07-28
       status: planted
       note: One planted out.
