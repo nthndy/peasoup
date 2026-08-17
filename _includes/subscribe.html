@@ -2,13 +2,16 @@
   <button type="button" class="subscribe-close" data-subscribe-close aria-label="Dismiss">&times;</button>
   <h2 class="subscribe-heading">Get new posts by email</h2>
   <p class="subscribe-lede">A note whenever there's a new update — plants, water chemistry, wildlife.</p>
-  <form class="subscribe-form" action="https://api.follow.it/subscription-form/M1RZRDRWN3pOendIWVkzT2t3V1UydWkyOThUZTNMNVZHa1JyVlRhdmZwaGttUzV6TUVtbFEvbGRUYWMzRnJsemRjQ1ZkRFNVRnRQWEs2a0VZMnB2aEt6ZUY1d3RtRHFUeUdCV3YwVVAxaEw4ZCtteXRWUFpnamlZWnhCV1FlTE58V0YrQTRlNFlOTG14NFJiV21rRlRrK0xDUVN1ZlpEd2JBcGhnVzVwUHRsVT0=/8" method="post">
+  
+  <form class="subscribe-form" action="https://buttondown.email/api/emails/embed-subscribe/nthndy" method="post" target="popupwindow" onsubmit="window.open('https://buttondown.email/nthndy', 'popupwindow')">
     <label class="visually-hidden" for="subscribe-email">Email address</label>
     <input class="subscribe-input" id="subscribe-email" type="email" name="email" required placeholder="Enter your email" spellcheck="false">
     <button class="subscribe-submit" type="submit">Subscribe</button>
   </form>
-  <a class="subscribe-powered" href="https://follow.it">Powered by follow.it</a>
+  
+  <a class="subscribe-powered" href="https://buttondown.email" target="_blank">Powered by Buttondown</a>
 </section>
+
 <script>
 (function () {
   var box = document.getElementById('subscribe-box');
@@ -19,9 +22,11 @@
     return;
   }
   var closeBtn = box.querySelector('[data-subscribe-close]');
-  closeBtn.addEventListener('click', function () {
-    box.hidden = true;
-    try { localStorage.setItem(KEY, '1'); } catch (e) {}
-  });
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function () {
+      box.hidden = true;
+      try { localStorage.setItem(KEY, '1'); } catch (e) {}
+    });
+  }
 })();
 </script>
