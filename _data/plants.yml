@@ -172,6 +172,11 @@
   notes: Native. 30-60cm of water above soil, full sun to partial shade. Flowers June-Aug.
   init_photo: /assets/img/nymphoides_init.jpg
   checks:
+    - date: 2026-08-24
+      status: thriving
+      note: >-
+        Thriving again, back on the list of plants doing well as the water
+        clears a bit post-heatwave.
     - date: 2026-08-16
       status: struggling
       note: >-
@@ -223,6 +228,11 @@
   notes: Rhizome planted at 45 degrees, weighted with pea gravel, full sun.
   init_photo: /assets/img/alba_lily_init.jpg
   checks:
+    - date: 2026-08-24
+      status: thriving
+      note: >-
+        Water lilies thriving again as the pond water clears a bit after the
+        heatwaves subside.
     - date: 2026-07-28
       status: thriving
       note: >-
@@ -261,6 +271,11 @@
     weighted with pea gravel alongside the existing Alba lily.
   init_photo: /assets/img/lily_bud_28jul.jpg
   checks:
+    - date: 2026-08-24
+      status: thriving
+      note: >-
+        Water lilies thriving again as the pond water clears a bit after the
+        heatwaves subside.
     - date: 2026-08-07
       status: thriving
       note: >-
@@ -286,6 +301,11 @@
   notes: Cape pondweed. Strap-like floating leaves, fragrant white flowers. Prefers cooler water.
   init_photo: /assets/img/hawthorn_28jul.jpg
   checks:
+    - date: 2026-08-24
+      status: thriving
+      note: >-
+        Still thriving, holding its place among the strongest performers as
+        the water clears a bit post-heatwave.
     - date: 2026-08-16
       status: thriving
       note: >-
@@ -327,6 +347,11 @@
   notes: Height 90cm, spread 45cm. Full sun, hardy. Planting depth 5-45cm above soil.
   init_photo: /assets/img/flowering_rush_init.jpg
   checks:
+    - date: 2026-08-24
+      status: thriving
+      note: >-
+        Still thriving, one of the standout performers as the pond water
+        clears a bit post-heatwave.
     - date: 2026-07-28
       status: thriving
       note: >-
@@ -378,6 +403,10 @@
   notes: Native. Shallow margins, tolerates damp soil to a few cm of water. Aromatic.
   init_photo: /assets/img/mint_28jul.jpg
   checks:
+    - date: 2026-08-24
+      status: steady
+      note: >-
+        Going steady on the upper shelf.
     - date: 2026-08-07
       status: thriving
       note: >-
@@ -393,6 +422,10 @@
   notes: Native. Shallow margins, small blue flowers May-Sept.
   init_photo: /assets/img/forgetmenot_28jul.jpg
   checks:
+    - date: 2026-08-24
+      status: steady
+      note: >-
+        Going steady on the upper shelf.
     - date: 2026-08-07
       status: thriving
       note: >-
@@ -408,6 +441,10 @@
   notes: Native shallow water plant. 0-10cm above soil. Flowers May-Aug.
   init_photo: /assets/img/beccabunga_init.jpg
   checks:
+    - date: 2026-08-24
+      status: steady
+      note: >-
+        Going steady on the upper shelf.
     - date: 2026-08-07
       status: steady
       note: >-
@@ -440,6 +477,10 @@
   notes: Native shallow water plant. Up to 15cm above soil. Height to 123cm, flowers June-Aug, shade tolerant.
   init_photo: /assets/img/carex_init.jpg
   checks:
+    - date: 2026-08-24
+      status: thriving
+      note: >-
+        Still thriving as the pond water clears a bit post-heatwave.
     - date: 2026-07-28
       status: steady
       note: Doing fine through the clear-out and re-planting.
@@ -466,6 +507,10 @@
   notes: Spreading perennial. Flowers June-Aug. Up to 15cm of water, height to 8cm.
   init_photo: /assets/img/jenny_init.jpg
   checks:
+    - date: 2026-08-24
+      status: steady
+      note: >-
+        Going steady on the upper shelf.
     - date: 2026-08-07
       status: steady
       note: >-
@@ -504,6 +549,12 @@
   notes: Native. Kingcup. Boggy margins to shallow water, flowers Mar-Jun (early — this planting is out of season).
   init_photo: /assets/img/marigold_28jul.jpg
   checks:
+    - date: 2026-08-24
+      status: thriving
+      note: >-
+        Thriving on the upper shelf.
+      photos:
+        - /assets/img/marsh_marigold_24aug.jpg
     - date: 2026-07-28
       status: planted
       note: One planted out.
