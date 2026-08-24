@@ -23,6 +23,16 @@ log:
   - date: 2026-08-16
     ammonia: 0
     nitrite: 0
+    phosphate: 5
+    ph: 9
+    note: >-
+      Ammonia and nitrite remain steady at 0 ppm. pH is back up to 9, and phosphate is back to 5ppm.
+    photos:
+      - /assets/img/water_24aug.jpg
+
+  - date: 2026-08-16
+    ammonia: 0
+    nitrite: 0
     phosphate: 7.5
     ph: 9
     note: >-
