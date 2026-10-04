@@ -9,6 +9,8 @@ banner_alt: "A section of the pond with security/wildlife camera"
 
 It's been a while since I updated this blog, as I've been away for a month. I was a bit nervous about leaving the pond, considering how closely I'd been monitoring it in the preceding weeks, but gardens take time and patience and all those good things, so I figured this was a good opportunity to really test the pond's self-sustaining credentials as we move into autumn.
 
+![A wide view of the pond, with the security camera on the rim, lilies and mare's tail in the water, and purple verbena blooming along the stone edge]({{ site.baseurl }}/assets/img/everything_4oct.jpg)
+
 Snails. The first thing I noticed were snails, absolutely everywhere — climbing up the central water column, milling about the outer walls, tucked into the corners of all the plant pots. An excellent and encouraging sign of biodiversity.
 
 ![Snails spread across the pond's walls and plant pots]({{ site.baseurl }}/assets/img/snails_4oct.gif)
