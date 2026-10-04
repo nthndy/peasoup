@@ -5,6 +5,9 @@
   notes: Weighted bunch. Throw on the surface and it sinks, or push into soil.
   init_photo: /assets/img/hornwort_init.jpg
   checks:
+    - date: 2026-10-04
+      status: lost
+      note: Gone — no longer present after a month left unattended.
     - date: 2026-07-25
       status: struggling
       note: >-
@@ -33,6 +36,9 @@
   added: 2026-07-02
   notes: Native. Prefers moving water and cooler conditions. Planting depth 20-90cm.
   checks:
+    - date: 2026-10-04
+      status: lost
+      note: Gone — no longer present after a month left unattended.
     - date: 2026-07-06
       status: steady
       note: Adapting well.
@@ -47,6 +53,9 @@
   notes: Native. Weighted bunch, placed just below the water line until established. Planting depth 15-45cm.
   init_photo: /assets/img/callitriche_init.jpg
   checks:
+    - date: 2026-10-04
+      status: lost
+      note: Gone — no longer present after a month left unattended.
     - date: 2026-08-07
       status: thriving
       note: >-
@@ -82,6 +91,15 @@
   notes: British native. Aquatic to 30cm or as a marginal. Label warns it can be invasive.
   init_photo: /assets/img/mares_init.jpg
   checks:
+    - date: 2026-10-04
+      status: thriving
+      note: >-
+        The three new plants added in August are well established and this
+        remains the strongest performer in the pond after a month left
+        unattended. The older clump's root network has been draped over the
+        outer wall so it doesn't strangle its neighbours.
+      photos:
+        - /assets/img/mares_rush_fibre_peltata_4oct.jpg
     - date: 2026-08-16
       status: steady
       note: >-
@@ -122,6 +140,13 @@
   notes: Cotton bud grass. Up to 10cm of water. Acts as an oxygenator. Height 25-30cm, spread 50cm.
   init_photo: /assets/img/fibreoptic_init.jpg
   checks:
+    - date: 2026-10-04
+      status: thriving
+      note: >-
+        Had an odd September but thriving nonetheless; moved one plant up
+        onto the fountain shelf to see how it takes to running water.
+      photos:
+        - /assets/img/mares_rush_fibre_peltata_4oct.jpg
     - date: 2026-08-16
       status: steady
       note: >-
@@ -172,6 +197,14 @@
   notes: Native. 30-60cm of water above soil, full sun to partial shade. Flowers June-Aug.
   init_photo: /assets/img/nymphoides_init.jpg
   checks:
+    - date: 2026-10-04
+      status: struggling
+      note: >-
+        Most of the mature leaves have dropped and drifted off, but new green
+        shoots are still coming from the base — reads as the plant entering
+        winter dormancy rather than genuine decline.
+      photos:
+        - /assets/img/mares_rush_fibre_peltata_4oct.jpg
     - date: 2026-08-24
       status: thriving
       note: >-
@@ -216,6 +249,11 @@
   notes: Inoculated from the balcony pond in an attempt to mitigate water evaporation during the summer heatwaves.
   init_photo: /assets/img/duckweed_16aug.jpg
   checks:
+    - date: 2026-10-04
+      status: steady
+      note: Topped up with more fronds to encourage a bit more greenery.
+      photos:
+        - /assets/img/hawthorn_duckweed_4oct.jpg
     - date: 2026-08-16
       status: steady
       note: >-
@@ -228,6 +266,13 @@
   notes: Rhizome planted at 45 degrees, weighted with pea gravel, full sun.
   init_photo: /assets/img/alba_lily_init.jpg
   checks:
+    - date: 2026-10-04
+      status: thriving
+      note: >-
+        Still the strongest lily, holding a healthy canopy of differently
+        aged pads after a month left unattended.
+      photos:
+        - /assets/img/alba_lily_4oct.jpg
     - date: 2026-08-24
       status: thriving
       note: >-
@@ -271,6 +316,14 @@
     weighted with pea gravel alongside the existing Alba lily.
   init_photo: /assets/img/lily_bud_28jul.jpg
   checks:
+    - date: 2026-10-04
+      status: steady
+      note: >-
+        Noticeable pad die-back, with some pads skeletonising as the plant
+        pulls energy back into the rhizome for winter, but crowns are healthy
+        and one put out another flower while I was away.
+      photos:
+        - /assets/img/lily_knotweed_mares_4oct.jpg
     - date: 2026-08-24
       status: thriving
       note: >-
@@ -301,6 +354,12 @@
   notes: Cape pondweed. Strap-like floating leaves, fragrant white flowers. Prefers cooler water.
   init_photo: /assets/img/hawthorn_28jul.jpg
   checks:
+    - date: 2026-10-04
+      status: thriving
+      note: Still flowering, with a hint of dormancy prep starting to show.
+      photos:
+        - /assets/img/hawthorn_rush_fibre_carex_lily_4oct.jpg
+        - /assets/img/hawthorn_duckweed_4oct.jpg
     - date: 2026-08-24
       status: thriving
       note: >-
@@ -323,6 +382,13 @@
   notes: Water knotweed. Native. Better in deep water but tolerates damp. Flowers July-Sept, planting depth 15-90cm.
   init_photo: /assets/img/knotweed_init.jpg
   checks:
+    - date: 2026-10-04
+      status: steady
+      note: >-
+        Lost most of its leaf cover and looks straggly, but the crown is
+        still healthy and green.
+      photos:
+        - /assets/img/lily_knotweed_mares_4oct.jpg
     - date: 2026-07-28
       status: steady
       note: Doing fine through the clear-out and re-planting.
@@ -347,6 +413,13 @@
   notes: Height 90cm, spread 45cm. Full sun, hardy. Planting depth 5-45cm above soil.
   init_photo: /assets/img/flowering_rush_init.jpg
   checks:
+    - date: 2026-10-04
+      status: thriving
+      note: >-
+        The oldest of the three rushes, and still the strongest — thriving
+        on the fountain shelf after a month left unattended.
+      photos:
+        - /assets/img/hawthorn_rush_fibre_carex_lily_4oct.jpg
     - date: 2026-08-24
       status: thriving
       note: >-
@@ -381,6 +454,14 @@
   notes: White-flowered form, kept as a separate entry from the existing (pink-flowered) Flowering rush.
   init_photo: /assets/img/white_rush_28jul.jpg
   checks:
+    - date: 2026-10-04
+      status: struggling
+      note: >-
+        Pot fell off its stone shelf while away, spilling the soil, but the
+        plant clung on through a month with barely any substrate left.
+        Topped up and reset.
+      photos:
+        - /assets/img/mares_rush_fibre_peltata_4oct.jpg
     - date: 2026-07-28
       status: planted
       note: One planted out.
@@ -392,6 +473,14 @@
   notes: Native. Stiff, grey-green, upright stems. Tolerates a range of water depths.
   init_photo: /assets/img/hard_rush_28jul.jpg
   checks:
+    - date: 2026-10-04
+      status: struggling
+      note: >-
+        Pot fell off its stone shelf while away, spilling the soil, but the
+        plant clung on through a month with barely any substrate left.
+        Topped up and reset.
+      photos:
+        - /assets/img/mares_rush_fibre_peltata_4oct.jpg
     - date: 2026-07-28
       status: planted
       note: One planted out.
@@ -403,6 +492,13 @@
   notes: Native. Shallow margins, tolerates damp soil to a few cm of water. Aromatic.
   init_photo: /assets/img/mint_28jul.jpg
   checks:
+    - date: 2026-10-04
+      status: thriving
+      note: >-
+        Thriving on the upper shelf and filling the air with a strong minty
+        smell.
+      photos:
+        - /assets/img/beccabunga_forgetmenot_marshmarigold_watermint_4oct.jpg
     - date: 2026-08-24
       status: steady
       note: >-
@@ -422,6 +518,14 @@
   notes: Native. Shallow margins, small blue flowers May-Sept.
   init_photo: /assets/img/forgetmenot_28jul.jpg
   checks:
+    - date: 2026-10-04
+      status: steady
+      note: >-
+        Doing fine on the upper shelf. Topped up with a possibly-dormant pot
+        of the same species from the balcony pond, whose own plant died back
+        over summer but has since reseeded itself into a nearby crack.
+      photos:
+        - /assets/img/beccabunga_forgetmenot_marshmarigold_watermint_4oct.jpg
     - date: 2026-08-24
       status: steady
       note: >-
@@ -441,6 +545,13 @@
   notes: Native shallow water plant. 0-10cm above soil. Flowers May-Aug.
   init_photo: /assets/img/beccabunga_init.jpg
   checks:
+    - date: 2026-10-04
+      status: struggling
+      note: >-
+        Down to about half its previous size, though still green and
+        otherwise healthy-looking, even on the water shelf.
+      photos:
+        - /assets/img/beccabunga_forgetmenot_marshmarigold_watermint_4oct.jpg
     - date: 2026-08-24
       status: steady
       note: >-
@@ -477,6 +588,14 @@
   notes: Native shallow water plant. Up to 15cm above soil. Height to 123cm, flowers June-Aug, shade tolerant.
   init_photo: /assets/img/carex_init.jpg
   checks:
+    - date: 2026-10-04
+      status: thriving
+      note: >-
+        Now towering to about a metre, easily the biggest plant in the pond.
+        Getting root-bound in its basket — plan to divide and repot come
+        spring.
+      photos:
+        - /assets/img/hawthorn_rush_fibre_carex_lily_4oct.jpg
     - date: 2026-08-24
       status: thriving
       note: >-
@@ -507,6 +626,13 @@
   notes: Spreading perennial. Flowers June-Aug. Up to 15cm of water, height to 8cm.
   init_photo: /assets/img/jenny_init.jpg
   checks:
+    - date: 2026-10-04
+      status: struggling
+      note: >-
+        Down to about half its previous size, though still green and
+        otherwise healthy-looking, even on the water shelf.
+      photos:
+        - /assets/img/beccabunga_forgetmenot_marshmarigold_watermint_4oct.jpg
     - date: 2026-08-24
       status: steady
       note: >-
@@ -549,6 +675,13 @@
   notes: Native. Kingcup. Boggy margins to shallow water, flowers Mar-Jun (early — this planting is out of season).
   init_photo: /assets/img/marigold_28jul.jpg
   checks:
+    - date: 2026-10-04
+      status: thriving
+      note: >-
+        Thriving on the upper shelf; a strong enough performer there that
+        more are on the shopping list.
+      photos:
+        - /assets/img/beccabunga_forgetmenot_marshmarigold_watermint_4oct.jpg
     - date: 2026-08-24
       status: thriving
       note: >-

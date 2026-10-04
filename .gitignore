@@ -7,3 +7,6 @@ Gemfile.lock
 __pycache__/
 *.pyc
 .DS_Store
+
+# Source video kept outside the repo; see ../peasoup_video_originals/
+*.mp4
