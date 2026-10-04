@@ -21,11 +21,13 @@ Peering a bit deeper in, which is all the easier now the (somewhat) cooler autum
 
 It's difficult to identify all these creatures, as they're right at the resolution limit of both my phone camera and my own eyes. Perhaps I need to get a microscope — more on that at a later date. My informed guess is that they're likely a mix of seed shrimp, daphnia and copepods. They play a crucial role in the pond ecosystem that's now established itself, acting as a near-invisible army of tiny composters, gobbling up decaying plant material and excreting it as a steady drip of ammonia waste that then, in [turn](https://youtu.be/W3xgcmIS3YU), feeds the beneficial bacteria which, in [turn](https://youtu.be/W3xgcmIS3YU), convert that into nitrites, which then, in [turn](https://youtu.be/W3xgcmIS3YU), get [turned](https://youtu.be/W3xgcmIS3YU) into nitrates that act, in [turn](https://youtu.be/W3xgcmIS3YU), as fertiliser for all the resident pond plants. It is, quite literally, the [circle of life](https://www.youtube.com/watch?v=dQw4w9WgXcQ).
 
-One creature I am one hundred percent certain of the identification on: DRAGONFLY NYMPHS. I started pulling the plants out of the water to top up some soil that had spilled, courtesy of a vandal magpie (caught in the act below) — but quickly had to put everything back in, as pretty much every single plant was teeming with these slightly monstrous, earwig-looking little things.
+One creature I am one hundred percent certain of the identification on: DRAGONFLY NYMPHS. I started pulling the plants out of the water to top up some soil that had spilled, courtesy of a vandal magpie, caught in the act below.
 
 ![A magpie about to tip soil out of one of the plant pots]({{ site.baseurl }}/assets/img/magpie_prevandalism_27sept.gif)
 
 ![The same pot, soil spilled, after the magpie moved on]({{ site.baseurl }}/assets/img/magpie_postvandalism_27sept.gif)
+
+Putting everything back in, I quickly realised that pretty much every single plant was teeming with these slightly monstrous, earwig-looking little things.
 
 ![Several mature dragonfly nymphs clinging to the submerged roots]({{ site.baseurl }}/assets/img/mature_dragonfly_nymphs_4oct.jpg)
 
